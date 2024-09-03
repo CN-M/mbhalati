@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { LetsGetJiggy } from "./Buttons";
 import { Logo } from "./Logo";
 export const Header = () => {
   return (
@@ -25,13 +26,7 @@ export const Header = () => {
           </li>
         </ul>
       </nav>
-      <div className="">
-        <Link href="/">
-          <button className="px-8 py-4 text-paragraph font-normal bg-secondary rounded-lg">
-            Let's Get Jiggy
-          </button>
-        </Link>
-      </div>
+      <LetsGetJiggy />
     </header>
   );
 };

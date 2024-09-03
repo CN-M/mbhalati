@@ -4,7 +4,10 @@ export const LetsGetJiggy = () => {
   return (
     <Link href="/">
       <button className="px-8 py-4 text-paragraph font-normal bg-secondary text-black-100 rounded-lg">
-        Let's Get Jiggy
+        <div className="flex space-x-4">
+          <p>Let's Get Jiggy</p>
+          <span role="img">🕺</span>
+        </div>
       </button>
     </Link>
   );
@@ -38,4 +41,8 @@ export const SendMessage = () => {
       </button>
     </Link>
   );
+};
+
+export const Emojis = () => {
+  return <>💁‍♂️ 🥹 ♥ 😂</>;
 };
