@@ -1,0 +1,37 @@
+import Link from "next/link";
+import { Logo } from "./Logo";
+export const Header = () => {
+  return (
+    <header className="flex items-center justify-around h-full w-full bg-white text-black-100 py-8 px-32">
+      <div className="">
+        <Logo />
+      </div>
+      <nav>
+        <ul className="flex text-paragraph text-black-100 font-regular space-x-8 ">
+          <li>
+            <Link className="hover:text-primary" href="#home">
+              Home
+            </Link>
+          </li>
+          <li>
+            <Link className="hover:text-primary" href="#about">
+              About
+            </Link>
+          </li>
+          <li>
+            <Link className="hover:text-primary" href="#contact">
+              Contact
+            </Link>
+          </li>
+        </ul>
+      </nav>
+      <div className="">
+        <Link href="/">
+          <button className="px-8 py-4 text-paragraph font-normal bg-secondary rounded-lg">
+            Let's Get Jiggy
+          </button>
+        </Link>
+      </div>
+    </header>
+  );
+};
