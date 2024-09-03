@@ -1,12 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import dribbble from "@/public/icons/dribbble-brands-solid.svg";
-import github from "@/public/icons/github-brands-solid.svg";
-import instagram from "@/public/icons/instagram-brands-solid.svg";
-import linkedIn from "@/public/icons/linkedin-in-brands-solid.svg";
-import spotify from "@/public/icons/spotify-brands-solid.svg";
-import xTwitter from "@/public/icons/x-twitter-brands-solid.svg";
+import xTwitter from "@/public/icons/brands-footer/Frame-1.svg";
+import dribbble from "@/public/icons/brands-footer/Frame-2.svg";
+import linkedIn from "@/public/icons/brands-footer/Frame-3.svg";
+import instagram from "@/public/icons/brands-footer/Frame-4.svg";
+import github from "@/public/icons/brands-footer/Frame.svg";
+import spotify from "@/public/icons/brands-footer/Vector.svg";
 
 export const Footer = () => {
   return (
@@ -30,15 +30,8 @@ export const Footer = () => {
           </li>
         </ul>
       </nav>
-      <div className="flex space-x-24 text-primary ">
-        <Image
-          className="fill-current"
-          src={github}
-          alt="Brand"
-          height={38.75}
-          width={40}
-          style={{ color: "Background" }}
-        />
+      <div className="flex space-x-24 text-black-50 ">
+        <Image src={github} alt="Brand" height={38.75} width={40} />
         <Image src={xTwitter} alt="Brand" height={40} width={40} />
         <Image src={linkedIn} alt="Brand" height={35} width={40} />
         <Image src={dribbble} alt="Brand" height={40} width={40} />

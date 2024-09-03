@@ -1,3 +1,5 @@
+import paperPlane from "@/public/icons/paper-plane-regular.svg";
+import Image from "next/image";
 import Link from "next/link";
 
 export const LetsGetJiggy = () => {
@@ -36,8 +38,9 @@ export const WinTheLottery = () => {
 export const SendMessage = () => {
   return (
     <Link href="/">
-      <button className="px-8 py-4 text-paragraph text-white font-normal bg-tertiary rounded-lg">
-        Send Message
+      <button className="flex space-x-4 px-8 py-4 text-paragraph text-white font-normal bg-tertiary rounded-lg">
+        <span>Send Message</span>
+        <Image src={paperPlane} alt="Brand" height={24} width={24} />
       </button>
     </Link>
   );
