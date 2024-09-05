@@ -21,15 +21,15 @@ const config: Config = {
     },
     extend: {
       fontSize: {
-        "heading-1": "5rem", // 80px / 16 = 5rem
-        "heading-2": "4rem", // 64px / 16 = 4rem
-        "heading-3": "3.1875rem", // 51px / 16 = 3.1875rem
-        "heading-4": "2.5625rem", // 41px / 16 = 2.5625rem
-        "heading-5": "2.0625rem", // 33px / 16 = 2.0625rem
-        "heading-6": "1.625rem", // 26px / 16 = 1.625rem
-        paragraph: "1.3125rem", // 21px / 16 = 1.3125rem
-        "paragraph-sm": "1.0625rem", // 17px / 16 = 1.0625rem
-        "paragraph-xs": "0.875rem", // 14px / 16 = 0.875rem
+        "heading-1": "3.8333rem", // 69px
+        "heading-2": "3.0556rem", // 55px
+        "heading-3": "2.4444rem", // 44px
+        "heading-4": "1.9444rem", // 35px
+        "heading-5": "1.5556rem", // 28px
+        "heading-6": "1.2778rem", // 23px
+        paragraph: "1rem", // 18px
+        "paragraph-sm": "0.8333rem", // 15px
+        "paragraph-xs": "0.6667rem", // 12px
       },
       lineHeight: {
         heading: "1.2",
