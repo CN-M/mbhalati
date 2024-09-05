@@ -31,7 +31,7 @@ export const Hero = () => {
         </div>
       </div>
 
-      <div className="flex flex-col items-center justify-center text-paragraph text-white w-1/3 space-y-8">
+      <div className="flex flex-col items-center justify-center text-paragraph text-white w-1/3 space-y-8 border p-8 rounded-3xl bg-gradient-to-br from-[#FFFFFF]/50 to-[#FFFFFF]/20 backdrop-blur-xl">
         <div className="flex flex-col items-center space-y-1">
           <Image
             className="rounded-full border border-white"
@@ -48,7 +48,7 @@ export const Hero = () => {
               Part-Time Astronaut
             </p>
           </div>
-          <p className="text-paragraph leading-paragraph">
+          <p className="text-paragraph leading-paragraph text-center">
             I do stuff on the internet. That's about it.
           </p>
         </div>
