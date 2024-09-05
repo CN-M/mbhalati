@@ -7,19 +7,19 @@ const config: Config = {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    colors: {
-      primary: "#4570A1",
-      secondary: "#D4E0ED",
-      tertiary: "#5B9EEF",
-      white: "#F5F8FA",
-      "black-100": "#0E1620",
-      "black-75": "rgba(14, 22, 32, 0.75)",
-      "black-50": "rgba(14, 22, 32, 0.50)",
-      "black-25": "rgba(14, 22, 32, 0.25)",
-      "black-10": "rgba(14, 22, 32, 0.10)",
-      "black-5": "rgba(14, 22, 32, 0.5)",
-    },
     extend: {
+      colors: {
+        primary: "#4570A1",
+        secondary: "#D4E0ED",
+        tertiary: "#5B9EEF",
+        white: "#F5F8FA",
+        "black-100": "#0E1620",
+        "black-75": "rgba(14, 22, 32, 0.75)",
+        "black-50": "rgba(14, 22, 32, 0.50)",
+        "black-25": "rgba(14, 22, 32, 0.25)",
+        "black-10": "rgba(14, 22, 32, 0.10)",
+        "black-5": "rgba(14, 22, 32, 0.5)",
+      },
       fontSize: {
         "heading-1": "3.8333rem", // 69px
         "heading-2": "3.0556rem", // 55px

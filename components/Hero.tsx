@@ -11,8 +11,8 @@ import spotify from "@/public/icons/brands/Vector.svg";
 
 export const Hero = () => {
   return (
-    <section className="flex items-center justify-center h-screen w-full px-32 py-64 bg-primary">
-      <div className="text-white space-y-8 text-center w-1/2">
+    <section className="flex items-center justify-center h-screen w-full lg:px-4 py-16 bg-primary">
+      <div className="text-white space-y-4 text-center w-1/2">
         <h1 className="text-heading-1 leading-heading font-bold">
           Hey. My name is C.N.
         </h1>
@@ -22,14 +22,14 @@ export const Hero = () => {
           <h3>Founder.</h3>
           <h3>And a Man Loved by Jesus.</h3>
         </div>
-        <div className="space-x-4">
+        <div className="flex items-center justify-center space-x-4">
           <GetToKnowMe />
           <WinTheLottery />
         </div>
       </div>
 
-      <div className="flex flex-col items-center justify-center text-paragraph text-white w-1/2 space-y-8">
-        <div className="flex flex-col items-center space-y-2">
+      <div className="flex flex-col items-center justify-center text-paragraph text-white w-1/3 space-y-8">
+        <div className="flex flex-col items-center space-y-1">
           <Image
             className="rounded-full border border-white"
             src={logo}
@@ -37,18 +37,20 @@ export const Hero = () => {
             height={50}
             width={50}
           />
-          <h4 className="font-medium text-paragraph leading-paragraph">
-            C.N. Mbhalati
-          </h4>
-          <p className="text-paragraph-sm leading-paragraph text-white/75">
-            Part-Time Astronaut
-          </p>
+          <div className="text-center">
+            <h4 className="font-medium text-paragraph leading-paragraph">
+              C.N. Mbhalati
+            </h4>
+            <p className="text-paragraph-sm leading-paragraph text-white/75">
+              Part-Time Astronaut
+            </p>
+          </div>
           <p className="text-paragraph leading-paragraph">
             I do stuff on the internet. That's about it.
           </p>
         </div>
 
-        <div className="flex space-x-24 text-black-50 ">
+        <div className="flex space-x-12 text-black-50 ">
           <Image src={github} alt="Brand" height={38.75} width={40} />
           <Image src={xTwitter} alt="Brand" height={40} width={40} />
           <Image src={linkedIn} alt="Brand" height={35} width={40} />

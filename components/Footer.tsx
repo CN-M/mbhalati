@@ -10,9 +10,9 @@ import spotify from "@/public/icons/brands-footer/Vector.svg";
 
 export const Footer = () => {
   return (
-    <footer className="flex flex-col items-center justify-center w-full bg-white space-y-12 py-32">
+    <footer className="flex flex-col items-center justify-center w-full bg-white space-y-8 py-16">
       <nav>
-        <ul className="flex text-paragraph text-black-50 font-regular space-x-16 ">
+        <ul className="flex text-paragraph text-black-75 font-regular space-x-12 ">
           <li>
             <Link className="hover:text-primary" href="#home">
               Home
@@ -30,34 +30,46 @@ export const Footer = () => {
           </li>
         </ul>
       </nav>
-      <div className="flex space-x-24 text-black-50 ">
-        <Image src={github} alt="Brand" height={38.75} width={40} />
-        <Image src={xTwitter} alt="Brand" height={40} width={40} />
-        <Image src={linkedIn} alt="Brand" height={35} width={40} />
-        <Image src={dribbble} alt="Brand" height={40} width={40} />
-        <Image src={instagram} alt="Brand" height={35} width={40} />
-        <Image src={spotify} alt="Brand" height={40} width={40} />
+      <div className="flex space-x-16 text-black-50 ">
+        <Link href="/">
+          <Image src={github} alt="Brand" height={38.75} width={40} />
+        </Link>
+        <Link href="/">
+          <Image src={xTwitter} alt="Brand" height={40} width={40} />
+        </Link>
+        <Link href="/">
+          <Image src={linkedIn} alt="Brand" height={35} width={40} />
+        </Link>
+        <Link href="/">
+          <Image src={dribbble} alt="Brand" height={40} width={40} />
+        </Link>
+        <Link href="/">
+          <Image src={instagram} alt="Brand" height={35} width={40} />
+        </Link>
+        <Link href="/">
+          <Image src={spotify} alt="Brand" height={40} width={40} />
+        </Link>
       </div>
       <div className="flex flex-col items-center space-y-2">
-        <span className="text-black-50 text-paragraph-sm">
+        <span className="text-black-75 text-paragraph-sm">
           &copy; {new Date().getFullYear()} C.N. Mbhalati. All rights reserved
           (whatever that means).
         </span>
         <hr className="w-1/2 text-black-25" />
-        <div className="space-x-2">
-          <span className="text-black-50 text-paragraph-xs text-extra">
+        <div className="space-x-1 flex items-center">
+          <span className="text-black-75 text-paragraph-xs text-extra">
             Made with
           </span>
-          <span role="img" className="text-[#FF0000] text-xl" aria-label="love">
+          <span role="img" className="text-[#FF0000] text-lg" aria-label="love">
             ❤️
           </span>
-          <span className="text-black-50 text-paragraph-xs text-extra">
+          <span className="text-black-75 text-paragraph-xs text-extra">
             and
           </span>
-          <span role="img" className="text-xl" aria-label="laughter">
+          <span role="img" className="text-lg" aria-label="laughter">
             😂
           </span>
-          <span className="text-black-50 text-paragraph-xs text-extra">
+          <span className="text-black-75 text-paragraph-xs text-extra">
             by{" "}
             <Link href="/">
               <strong>Kevin Hart</strong>
