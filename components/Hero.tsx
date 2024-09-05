@@ -1,7 +1,10 @@
 import logo from "@/public/img/pfp.jpg";
 import Image from "next/image";
+import Link from "next/link";
+
 import { GetToKnowMe, WinTheLottery } from "./Buttons";
 
+import { socialLinks } from "@/config/socialLinks";
 import xTwitter from "@/public/icons/brands/Frame-1.svg";
 import dribbble from "@/public/icons/brands/Frame-2.svg";
 import linkedIn from "@/public/icons/brands/Frame-3.svg";
@@ -51,12 +54,24 @@ export const Hero = () => {
         </div>
 
         <div className="flex space-x-12 text-black-50 ">
-          <Image src={github} alt="Brand" height={38.75} width={40} />
-          <Image src={xTwitter} alt="Brand" height={40} width={40} />
-          <Image src={linkedIn} alt="Brand" height={35} width={40} />
-          <Image src={dribbble} alt="Brand" height={40} width={40} />
-          <Image src={instagram} alt="Brand" height={35} width={40} />
-          <Image src={spotify} alt="Brand" height={40} width={40} />
+          <Link href={socialLinks.github} target="_blank">
+            <Image src={github} alt="Brand" height={38.75} width={40} />
+          </Link>
+          <Link href={socialLinks.xTwitter} target="_blank">
+            <Image src={xTwitter} alt="Brand" height={40} width={40} />
+          </Link>
+          <Link href={socialLinks.linkedIn} target="_blank">
+            <Image src={linkedIn} alt="Brand" height={35} width={40} />
+          </Link>
+          <Link href={socialLinks.dribbble} target="_blank">
+            <Image src={dribbble} alt="Brand" height={40} width={40} />
+          </Link>
+          <Link href={socialLinks.instagram} target="_blank">
+            <Image src={instagram} alt="Brand" height={35} width={40} />
+          </Link>
+          <Link href={socialLinks.spotify} target="_blank">
+            <Image src={spotify} alt="Brand" height={40} width={40} />
+          </Link>
         </div>
       </div>
     </section>

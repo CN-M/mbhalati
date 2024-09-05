@@ -8,6 +8,8 @@ import instagram from "@/public/icons/brands-footer/Frame-4.svg";
 import github from "@/public/icons/brands-footer/Frame.svg";
 import spotify from "@/public/icons/brands-footer/Vector.svg";
 
+import { socialLinks } from "@/config/socialLinks";
+
 export const Footer = () => {
   return (
     <footer className="flex flex-col items-center justify-center w-full bg-white space-y-8 py-16">
@@ -31,22 +33,22 @@ export const Footer = () => {
         </ul>
       </nav>
       <div className="flex space-x-16 text-black-50 ">
-        <Link href="/">
+        <Link href={socialLinks.github} target="_blank">
           <Image src={github} alt="Brand" height={38.75} width={40} />
         </Link>
-        <Link href="/">
+        <Link href={socialLinks.xTwitter} target="_blank">
           <Image src={xTwitter} alt="Brand" height={40} width={40} />
         </Link>
-        <Link href="/">
+        <Link href={socialLinks.linkedIn} target="_blank">
           <Image src={linkedIn} alt="Brand" height={35} width={40} />
         </Link>
-        <Link href="/">
+        <Link href={socialLinks.dribbble} target="_blank">
           <Image src={dribbble} alt="Brand" height={40} width={40} />
         </Link>
-        <Link href="/">
+        <Link href={socialLinks.instagram} target="_blank">
           <Image src={instagram} alt="Brand" height={35} width={40} />
         </Link>
-        <Link href="/">
+        <Link href={socialLinks.spotify} target="_blank">
           <Image src={spotify} alt="Brand" height={40} width={40} />
         </Link>
       </div>

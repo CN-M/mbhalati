@@ -3,7 +3,10 @@ import { LetsGetJiggy } from "./Buttons";
 import { Logo } from "./Logo";
 export const Header = () => {
   return (
-    <header className="flex items-center justify-around h-full w-full bg-white text-black-100 py-4 px-16">
+    <header
+      id="home"
+      className="flex items-center justify-around h-full w-full bg-white text-black-100 py-4 px-16"
+    >
       <div className="">
         <Logo />
       </div>

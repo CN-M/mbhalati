@@ -6,7 +6,10 @@ import { SendMessage } from "./Buttons";
 
 export const ContactMe = () => {
   return (
-    <section className="flex justify-center h-full w-full bg-primary px-16 py-32 space-x-32">
+    <section
+      id="contact"
+      className="flex justify-center h-full w-full bg-primary px-16 py-32 space-x-32"
+    >
       <div className="text-white w-1/3 space-y-6">
         <h3 className="text-heading-3 leading-heading font-light">
           Contact Me
