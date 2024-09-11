@@ -10,7 +10,7 @@ export const AboutMe = () => {
       id="about"
       className="flex h-full w-full justify-center bg-white px-16 py-32 space-x-16"
     >
-      <div className="text-black-100 space-y-4 text-left w-1/3">
+      <div className="text-black-100 space-y-4 text-left [@media(min-width:1400px)]:w-1/3 w-1/2">
         <h1 className="text-heading-3 leading-heading font-light">About Me</h1>
         <div className="text-paragraph leading-paragraph align-left space-y-2">
           <p>

@@ -5,3 +5,19 @@
 html {
   font-size: 18px;
 }
+
+/* blockquote {
+  @apply border-l-4 px-4 italic;
+}
+
+blockquote-1 {
+  border-left: 4px solid #ddd;
+  padding-left: 16px;
+  color: #;
+  font-style: italic;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+} */
