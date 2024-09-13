@@ -21,15 +21,15 @@ function PostCard(post: Post) {
       <h2 className="mb-1 text-xl">
         <Link
           href={post.url}
-          className="text-blue-700 hover:text-blue-900 dark:text-blue-400"
+          className="text-emerald-500 hover:text-emerald-400 "
         >
           {post.title}
         </Link>
       </h2>
-      <time dateTime={post.date} className="mb-2 block text-xs text-gray-600">
+      <time dateTime={post.date} className="mb-2 block text-xs text-black-75">
         {format(parseISO(post.date), "LLLL d, yyyy")}
       </time>
-      <Link href={`/category/${post.category}`} className="text-blue-600">
+      <Link href={`/category/${post.category}`} className="text-emerald-500">
         {post.category}
       </Link>
     </div>

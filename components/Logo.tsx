@@ -7,13 +7,11 @@ export const Logo = () => {
     <Link href="/">
       <div className="flex items-center space-x-2">
         <Image
-          className="rounded-full"
+          className="rounded-full lg:h-12 lg:w-12 h-8 w-8"
           src={logo}
           alt="C.N. Mbhalati profile picture Logo"
-          height={50}
-          width={50}
         />
-        <p className="text-paragraph text-black-100 hover:text-primary">
+        <p className="hidden lg:block text-paragraph text-black-100 hover:text-emerald-500">
           @cn_mbhalati
         </p>
       </div>

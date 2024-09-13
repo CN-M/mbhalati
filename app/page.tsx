@@ -1,6 +1,5 @@
 import { AboutMe } from "@/components/AboutMe";
 import { ContactMe } from "@/components/Contact";
-import { Footer } from "@/components/Footer";
 import { Hero } from "@/components/Hero";
 
 export default function Home() {
@@ -9,7 +8,6 @@ export default function Home() {
       <Hero />
       <AboutMe />
       <ContactMe />
-      <Footer />
     </main>
   );
 }

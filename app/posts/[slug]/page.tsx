@@ -34,19 +34,22 @@ const PostLayout = ({ params }: { params: { slug: string } }) => {
         <div className="mb-8 text-center">
           <time
             dateTime={post.date}
-            className="mb-2 text-paragraph-sm text-gray-500"
+            className="mb-2 text-paragraph-sm text-black-75"
           >
             {format(parseISO(post.date), "LLLL d, yyyy")}
           </time>
-          <h1 className="text-heading-2 font-extrabold leading-tight text-gray-800 dark:text-gray-100">
+          <h1 className="text-heading-2 font-extrabold leading-tight text-black-100 dark:text-gray-100">
             {post.title}
           </h1>
-          <Link href={`/category/${post.category}`} className="text-blue-600">
+          <Link
+            href={`/category/${post.category}`}
+            className="text-lg text-emerald-500"
+          >
             {post.category}
           </Link>
         </div>
         <div
-          className="[&>*]:mb-3 [&>*:last-child]:mb-0 prose dark:prose-invert"
+          className="[&>*]:mb-3 [&>*:last-child]:mb-0 pb-8 prose prose-lg dark:prose-invert"
           dangerouslySetInnerHTML={{ __html: post.body.html }}
         />
       </article>

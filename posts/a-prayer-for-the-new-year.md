@@ -11,7 +11,7 @@ But, my dear reader, I beseech you to be more excited than anxious. I beseech yo
 
 Like Vienna, joy waits for you in the midst of your journey. It's really beautiful when you think about it. The thing, though, about joy is that often she hides where we're least grateful. She hides in our mother's smile, our friend's laughter, the kindness of strangers, and even in our own suffering. Joy is an ever present calmness and peace that we flow in and out of from time to time. She'll always be there. Even if we feel like we're too broken to enjoy her.
 
-**Some final thoughts...**
+## Some final thoughts...
 
 I love hitting the gym and lifting weights (even though I'm fat). Some people speak about the gym and how much they love it because it helps cure their depression and keeps the demons at bay. For a lot of people it's a sanctuary where the mind is invited to remain quiet.
 
