@@ -70,6 +70,7 @@ export const AboutMe = () => {
           className="rounded-2xl w-full h-auto"
           src={halfsies}
           alt="C.N. Mbhalati profile picture Logo"
+          priority
         />
       </div>
       <div className="flex flex-col h-full 2xl:w-1/3 lg:w-1/2">
@@ -77,6 +78,7 @@ export const AboutMe = () => {
           className="rounded-2xl w-full h-auto"
           src={handsomeBlackMan}
           alt="C.N. Mbhalati profile picture Logo"
+          priority
         />
       </div>
     </section>

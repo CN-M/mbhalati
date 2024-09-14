@@ -38,6 +38,7 @@ export const Hero = () => {
             className="rounded-full border border-white lg:h-20 lg:w-20 md:h-14 md:w-14 h-10 w-10"
             src={logo}
             alt="C.N. Mbhalati profile picture Logo"
+            priority
           />
           <div className="text-center">
             <h4 className="font-medium lg:text-heading-6 text-paragraph-sm md:text-paragraph leading-paragraph">

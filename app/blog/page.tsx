@@ -17,6 +17,7 @@ function PostCard(post: Post) {
                 alt={title}
                 width={2000}
                 height={2000}
+                priority
               />
             </div>
           </div>

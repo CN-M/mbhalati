@@ -55,7 +55,7 @@ Let go for a few. Breathe. Put away the journal, the morning routine, and just e
 
 **Contribute a Verse**
 
-> To quote from Whitman, "O me! O life!… of the questions of these recurring; of the endless trains of the faithless… of cities filled with the foolish; what good amid these, O me, O life?" Answer. That you are here - that life exists, and identity; that the powerful play goes on and you may contribute a verse. That the powerful play \***\*goes on\*\*** and you may contribute a verse. What will your verse be?
+> To quote from Whitman, "O me! O life!… of the questions of these recurring; of the endless trains of the faithless… of cities filled with the foolish; what good amid these, O me, O life?" Answer. That you are here - that life exists, and identity; that the powerful play goes on and you may contribute a verse. That the powerful play **goes on** and you may contribute a verse. What will your verse be?
 
 _—Robin Williams, Dead Poets Society_
 
