@@ -21,7 +21,7 @@ export const Hero = () => {
           Hey. My name is C.N.
         </h1>
         <div className="text-heading-6 md:text-heading-3 lg:text-heading-3 font-light leading-heading">
-          <h3>I'm a Software Engineer.</h3>
+          <h3>I&apos;m a Software Engineer.</h3>
           <h3>UI/UX Designner.</h3>
           <h3>Founder.</h3>
           <h3>And a Man Loved by Jesus.</h3>
@@ -48,7 +48,7 @@ export const Hero = () => {
             </p>
           </div>
           <p className="text-paragraph-sm lg:text-heading-6 md:text-paragraph leading-paragraph text-center">
-            I do stuff on the internet. That's about it.
+            I do stuff on the internet. That&apos;s about it.
           </p>
         </div>
 
