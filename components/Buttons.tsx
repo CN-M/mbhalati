@@ -11,7 +11,7 @@ export const LetsGetJiggy = () => {
       href="https://youtu.be/3JcmQONgXJM?si=e2uGjnzdI-0AbdcH"
       target="_blank"
     >
-      <button className="lg:px-8 lg:py-4 md:px-8 md:py-4 px-4 py-2 md:space-x-2 space-x-1 flex items-center justify-center 2xl:space-x-3 xl:space-x-2 2xl:px-8 2xl:py-4 2xl:text-paragraph md:text-paragraph text-paragraph-xs leading-paragraph font-medium bg-secondary text-black-100 rounded-lg">
+      <button className="lg:px-8 lg:py-4 md:px-8 md:py-4 px-4 py-2 md:space-x-2 space-x-1 flex items-center justify-center 2xl:space-x-3 xl:space-x-2 2xl:px-8 2xl:py-4 2xl:text-paragraph md:text-paragraph text-paragraph-xs leading-paragraph font-regular bg-secondary text-black-100 rounded-lg">
         <p>Let&apos;s Get Jiggy</p>
         <span role="img">🕺</span>
       </button>
@@ -22,7 +22,7 @@ export const LetsGetJiggy = () => {
 export const GetToKnowMe = () => {
   return (
     <Link href="#about">
-      <button className="lg:px-8 lg:py-4 md:px-8 md:py-4 px-4 py-2 md:space-x-2 space-x-1 flex items-center justify-center 2xl:space-x-3 xl:space-x-2 2xl:px-8 2xl:py-4 2xl:text-paragraph md:text-paragraph text-paragraph-sm leading-paragraph font-medium bg-white text-black-100 rounded-lg">
+      <button className="lg:px-8 lg:py-4 md:px-8 md:py-4 px-4 py-2 md:space-x-2 space-x-1 flex items-center justify-center 2xl:space-x-3 xl:space-x-2 2xl:px-8 2xl:py-4 2xl:text-paragraph md:text-paragraph text-paragraph-sm leading-paragraph font-regular bg-white text-black-100 rounded-lg">
         <span>Get to Know Me</span>
         <Image
           src={arrowDown}
@@ -40,7 +40,7 @@ export const WinTheLottery = () => {
       href="https://youtu.be/dQw4w9WgXcQ?si=rrpJS7Dx3KyKoG1-"
       target="_blank"
     >
-      <button className="lg:px-8 lg:py-4 md:px-8 md:py-4 px-4 py-2 flex items-center justify-center 2xl:space-x-3 md:space-x-2  space-x-1 2xl:px-8 2xl:py-4 2xl:text-paragraph md:text-paragraph text-paragraph-sm leading-paragraph font-medium bg-tertiary text-black-100 rounded-lg">
+      <button className="lg:px-8 lg:py-4 md:px-8 md:py-4 px-4 py-2 flex items-center justify-center 2xl:space-x-3 md:space-x-2  space-x-1 2xl:px-8 2xl:py-4 2xl:text-paragraph md:text-paragraph text-paragraph-sm leading-paragraph font-regular bg-tertiary text-black-100 rounded-lg">
         <span>Win the Lottery</span>
         <Image
           src={moneyHand}
@@ -56,7 +56,7 @@ export const SendMessage = () => {
   return (
     <button
       type="submit"
-      className="font-medium lg:px-8 lg:py-4 px-4 py-2 flex items-center justify-center w-full md:space-x-4 space-x-2 text-paragraph-sm md:text-paragraph leading-paragraph text-white md:font-normal bg-tertiary rounded-lg"
+      className="font-regular lg:px-8 lg:py-4 px-4 py-2 flex items-center justify-center w-full md:space-x-4 space-x-2 text-paragraph-sm md:text-paragraph leading-paragraph text-white md:font-normal bg-tertiary rounded-lg"
     >
       <span>Send Message</span>
       <Image src={paperPlane} alt="Brand" className="md:h-5 md:w-5 h-4 w-4" />
