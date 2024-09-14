@@ -37,7 +37,7 @@ const PostLayout = ({ params }: { params: { slug: string } }) => {
           >
             {format(parseISO(post.date), "LLLL d, yyyy")}
           </time>
-          <h1 className="text-heading-4 md:text-heading-3 lg:text-heading-2 font-extrabold leading-tight text-black-100 dark:text-gray-100">
+          <h1 className="text-heading-4 md:text-heading-3 lg:text-heading-2 font-extrabold leading-tight text-black-100">
             {post.title}
           </h1>
           <Link
@@ -48,7 +48,7 @@ const PostLayout = ({ params }: { params: { slug: string } }) => {
           </Link>
         </div>
         <div
-          className="[&>*]:mb-3 [&>*:last-child]:mb-0 pb-8 prose md:prose-lg dark:prose-invert"
+          className="[&>*]:mb-3 [&>*:last-child]:mb-0 pb-8 prose md:prose-lg"
           dangerouslySetInnerHTML={{ __html: post.body.html }}
         />
       </article>
