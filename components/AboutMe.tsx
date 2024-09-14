@@ -10,11 +10,11 @@ export const AboutMe = () => {
       id="about"
       className="flex flex-col lg:flex-row h-full w-full justify-center items-center bg-white 2xl:px-32 xl:px-16 lg:px-8 lg:py-16 md:px-24 px-6 py-8 xl:space-x-16 lg:space-x-8 md:space-y-8 space-y-4"
     >
-      <div className="text-black-100 space-y-2 text-left 2xl:w-1/2 lg:w-1/2 w-full">
+      <div className="text-black-100 space-y-2 text-left 2xl:w-1/3 lg:w-1/2 w-full">
         <h1 className="lg:text-heading-2 text-heading-4 lg:text-left text-center md:text-heading-3 leading-heading font-light">
           About Me
         </h1>
-        <div className="lg:text-heading-6 md:text-paragraph text-paragraph-sm leading-paragraph align-left space-y-2">
+        <div className="md:text-paragraph text-paragraph-sm leading-paragraph align-left space-y-2">
           <p>
             I hail from the <strong>southern most country</strong> on the{" "}
             <strong>content of Africa</strong>. You guessed it! South Africa!
@@ -22,7 +22,7 @@ export const AboutMe = () => {
           </p>
           <p>
             I have a degree in <strong>Mathematics</strong> and{" "}
-            <strong>Statistics</strong>, but quite frankly that’s the least
+            <strong>Statistics</strong>, but quite frankly that&apos;s the least
             interesting thing about me.
           </p>
           <p>
@@ -30,37 +30,40 @@ export const AboutMe = () => {
             <Link href="/">
               <strong className="text-emerald-500">blog</strong>
             </Link>{" "}
-            I haven’t updated in a while.
+            I haven&apos;t updated in a while.
           </p>
           <p>
             I have a{" "}
             <Link href="/">
               <strong className="text-emerald-500">podcast</strong>
             </Link>
-            , too. It kind of sucks, but it’ll get better.
+            , too. It kind of sucks, but it&apos;ll get better.
           </p>
           <p>
-            I’m still trying to figure out <strong>who I am</strong> and{" "}
+            I&apos;m still trying to figure out <strong>who I am</strong> and{" "}
             <strong>what I want</strong>.
           </p>
           <p className="hidden lg:block">
             By the way. Do you see that photo right there? Next to this
-            paragraph? This isn’t a photo of me. I just typed
+            paragraph? This isn&apos;t a photo of me. I just typed
             <i>“handsome black man”</i> on <Link href="/">Unsplash</Link> and
             this was the first result.{" "}
           </p>
           <p className="block lg:hidden">
             By the way. Do you see that photo right below? That guy right under
-            this paragraph? This isn’t a photo of me. I just typed{" "}
+            this paragraph? This isn&apos;t a photo of me. I just typed{" "}
             <i>“handsome black man”</i> on <Link href="/">Unsplash</Link> and
             this was the first result.{" "}
           </p>
           <p>I have no idea who this man is...</p>
-          <p>I don’t know. I thought it would be funny. Anyway. Moving on...</p>
           <p>
-            I’m interested in <strong>building startups</strong>. There’s no
-            doubt in my mind that I’ll die a <strong>billionaire</strong>. But
-            until then, I’ll keep sending texts like these:
+            I don&apos;t know. I thought it would be funny. Anyway. Moving on...
+          </p>
+          <p>
+            I&apos;m interested in <strong>building startups</strong>.
+            There&apos;s no doubt in my mind that I&apos;ll die a{" "}
+            <strong>billionaire</strong>. But until then, I&apos;ll keep sending
+            texts like these:
           </p>
         </div>
         <Image
@@ -69,7 +72,7 @@ export const AboutMe = () => {
           alt="C.N. Mbhalati profile picture Logo"
         />
       </div>
-      <div className="flex flex-col h-full lg:w-1/2">
+      <div className="flex flex-col h-full 2xl:w-1/3 lg:w-1/2">
         <Image
           className="rounded-2xl w-full h-auto"
           src={handsomeBlackMan}

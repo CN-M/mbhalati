@@ -19,7 +19,7 @@ export const Header = () => {
             </Link>
           </li>
           <li>
-            <Link className="hover:text-emerald-500" href="#blog">
+            <Link className="hover:text-emerald-500" href="/blog">
               Blog
             </Link>
           </li>

@@ -17,14 +17,14 @@ I want you to think about the moments when you’ve been cut off on the road, wh
 
 It can be so easy to hear things through angry ears, and see things through angry eyes. But I want you to take in information and see people’s intent. We jump to too many conclusions when speaking to people while barely even listening to them. There’s this speech by David Foster Wallace. It’s called “[This is Water](https://fs.blog/david-foster-wallace-this-is-water/).” It’s a speech I’ll discuss more in later blog posts and newsletters. But in it, he speaks about being conscious of what we think and feel. Our default setting is self-centeredness. Our default setting is to point at someone else and blame them for our discomfort in the current moment. Nuance isn’t sexy. And that’s unfortunate. It’s unfortunate that we rarely stop and think about what another person meant. It’s unfortunate that we don’t try and figure out their intent and instead settle on the most convenient narrative that turns us into some kind of victim. And yet, we are taken aback when people treat us like this.
 
-_“We judge ourselves by our intentions and others by their behaviour.”_  
-— Stephen M.R. Covey, The Speed of Trust
+> “We judge ourselves by our intentions and others by their behaviour.”
+> — Stephen M.R. Covey, The Speed of Trust
 
 The world doesn’t revolve around you. You have been wrong before and you will likely be wrong again, multiple times in fact. Give grace in the measure you’d like to receive it. See people. See others. See what they have done for you and see what you can do for them. Open your eyes and see others.
 
 Pastor Matt Chandler of [the Village Church](https://www.youtube.com/@thevillagechurch) said something that resonated with me in a sermon I heard many moons ago:
 
-> _“If you will track your heart, and pay attention to your frustrations and agitations, they are almost always tied to thinking that life is all about you.”_
+> If you will track your heart, and pay attention to your frustrations and agitations, they are almost always tied to thinking that life is all about you.
 
 Life is not all about you. And not realising this in the first place is causing you a lot of heartache. The world doesn’t revolve around you.
 

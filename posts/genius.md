@@ -7,7 +7,7 @@ coverImage: "/img/blog/light-bulbs.jpg"
 
 When asked if he was a genius, Thomas Edison responded:
 
-**"You know well enough I am nothing of the sort, unless we accept the theory that genius is prolonged patience. I am patient enough to be sure."**
+> "You know well enough I am nothing of the sort, unless we accept the theory that genius is prolonged patience. I am patient enough to be sure."
 
 Sometimes genius looks like something out of this world, and sometimes it very well is. But most of the time it's nothing but time under tension. If you train hard enough for long enough eventually you will become a master.
 

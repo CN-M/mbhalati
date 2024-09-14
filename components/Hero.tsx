@@ -13,22 +13,15 @@ import instagram from "@/public/icons/brands/Frame-4.svg";
 import github from "@/public/icons/brands/Frame.svg";
 import spotify from "@/public/icons/brands/Vector.svg";
 
-import { Bebas_Neue } from "next/font/google";
-
-const bebas_Neue = Bebas_Neue({ subsets: ["latin-ext"], weight: "400" });
-
 export const Hero = () => {
   return (
     <section className="flex flex-col xl:flex-row lg:space-y-10 2xl:space-x-8 max-xl:space-y-8 max-sm:space-y-4 items-center justify-center h-full md:h-screen w-full 2xl:px-32 lg:px-4 py-16 bg-primary">
       <div className="text-white md:space-y-2 space-y-1 text-center 2xl:w-4/5 md:w-full md:px-4">
-        {/* <h1 className="lg:text-heading-1 text-heading-4 md:text-heading-2 leading-heading font-bold"> */}
-        <h1
-          className={`${bebas_Neue.className} lg:text-heading-1 text-heading-4 md:text-heading-2 leading-heading font-bold`}
-        >
+        <h1 className="lg:text-heading-1 text-heading-4 md:text-heading-2 leading-heading font-bold">
           Hey. My name is C.N.
         </h1>
         <div className="text-heading-6 md:text-heading-3 lg:text-heading-3 font-light leading-heading">
-          <h3>I&apos;m a Software Engineer.</h3>
+          <h3>I'm a Software Engineer.</h3>
           <h3>UI/UX Designner.</h3>
           <h3>Founder.</h3>
           <h3>And a Man Loved by Jesus.</h3>
@@ -55,51 +48,47 @@ export const Hero = () => {
             </p>
           </div>
           <p className="text-paragraph-sm lg:text-heading-6 md:text-paragraph leading-paragraph text-center">
-            I do stuff on the internet. That&apos;s about it.
+            I do stuff on the internet. That's about it.
           </p>
         </div>
 
-        <div className="flex items-center justify-center md:flex-row 2xl:space-x-8 xl:space-x-8 md:space-x-16 space-x-6 text-black-50">
+        <div className="flex items-center justify-center md:flex-row 2xl:space-x-14 xl:space-x-8 md:space-x-14 space-x-6 text-black-50">
           <Link href={socialLinks.github} target="_blank">
-            <Image
-              src={github}
-              alt="Brand"
-              className="md:w-10 md:h-10 h-5 w-5"
-            />
+            <Image src={github} alt="Brand" className="md:w-9 md:h-9 h-5 w-5" />
           </Link>
           <Link href={socialLinks.xTwitter} target="_blank">
             <Image
               src={xTwitter}
               alt="Brand"
-              className="md:w-10 md:h-10 h-5 w-5"
+              className="md:w-9 md:h-9 h-5 w-5"
             />
           </Link>
           <Link href={socialLinks.linkedIn} target="_blank">
             <Image
               src={linkedIn}
               alt="Brand"
-              className="md:w-10 md:h-10 h-5 w-5"
+              className="md:w-9 md:h-9 h-5 w-5"
             />
           </Link>
           <Link href={socialLinks.dribbble} target="_blank">
             <Image
               src={dribbble}
               alt="Brand"
-              className="md:w-10 md:h-10 h-5 w-5"
+              className="md:w-9 md:h-9 h-5 w-5"
             />
           </Link>
           <Link href={socialLinks.instagram} target="_blank">
             <Image
               src={instagram}
               alt="Brand"
-              className="md:w-10 md:h-10 h-5 w-5"
+              className="md:w-9 md:h-9 h-5 w-5"
             />
           </Link>
           <Link href={socialLinks.spotify} target="_blank">
             <Image
               src={spotify}
               alt="Brand"
-              className="md:w-10 md:h-10 h-5 w-5"
+              className="md:w-9 md:h-9 h-5 w-5"
             />
           </Link>
         </div>

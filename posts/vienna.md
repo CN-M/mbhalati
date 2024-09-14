@@ -43,7 +43,7 @@ Pressure from parents, friends, lecturers, bosses, and even ourselves can press 
 
 I have an article coming up titled along the lines of "Why Self-help is stupid." And I know I **literally** run a [self-improvement blog](https://cn-m.github.io/), so maybe I'm shooting myself in the foot, but so many of us forget to enjoy the fruits of our productivity and discipline. Productivity and discipline allow you to do what needs to be done and what you want to do all in time to focus on what really matters. And what matters is your relationships, your friendships, your body, and all the other things that make life truly living for. **We use self-improvement to buy back our time, our freedom, our autonomy, so we can spend it on these intangible things**. Love, beauty, friendship, belonging; these intangible things are the spice of life, these things that we cannot touch are the things we need to hold closest to us.
 
-_We don't read and write poetry because it's cute. We read and write poetry because we are members of the human race. And the human race is filled with passion. And medicine, law, business, engineering, these are noble pursuits and necessary to sustain life. **But poetry, beauty, romance, love, these are what we stay alive for**._
+> We don't read and write poetry because it's cute. We read and write poetry because we are members of the human race. And the human race is filled with passion. And medicine, law, business, engineering, these are noble pursuits and necessary to sustain life. **But poetry, beauty, romance, love, these are what we stay alive for**.
 
 _— Robin Williams, Dead Poets Society_
 
@@ -55,7 +55,7 @@ Let go for a few. Breathe. Put away the journal, the morning routine, and just e
 
 **Contribute a Verse**
 
-_To quote from Whitman, "O me! O life!… of the questions of these recurring; of the endless trains of the faithless… of cities filled with the foolish; what good amid these, O me, O life?" Answer. That you are here - that life exists, and identity; that the powerful play goes on and you may contribute a verse. That the powerful play \***\*goes on\*\*** and you may contribute a verse. What will your verse be?_
+> To quote from Whitman, "O me! O life!… of the questions of these recurring; of the endless trains of the faithless… of cities filled with the foolish; what good amid these, O me, O life?" Answer. That you are here - that life exists, and identity; that the powerful play goes on and you may contribute a verse. That the powerful play \***\*goes on\*\*** and you may contribute a verse. What will your verse be?
 
 _—Robin Williams, Dead Poets Society_
 

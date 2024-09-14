@@ -19,18 +19,17 @@ const PostLayout = ({ params }: { params: { slug: string } }) => {
   return (
     <div className="flex flex-col h-full w-full items-center justify-center">
       {post.coverImage && (
-        <div className="my-6 w-auto h-[60vh] flex items-center justify-center">
-          {/* <div className="my-6 w-auto h-[50vh] flex items-center justify-center"> */}
+        <div className="my-6 w-full xl:h-[80vh] lg:h-[60vh] md:h-[50vh] sm:h-[40vh] h-[30vh] px-5 flex items-center justify-center">
           <Image
             src={post.coverImage}
             alt={post.title}
-            className="rounded-2xl w-full h-full object-center"
+            className="rounded-2xl w-full h-full object-cover"
             height={2000}
             width={2000}
           />
         </div>
       )}
-      <article className="flex flex-col items-center justify-center w-4/5 h-full">
+      <article className="flex flex-col items-center justify-center w-full px-6 h-full">
         <div className="mb-8 text-center">
           <time
             dateTime={post.date}
@@ -38,18 +37,18 @@ const PostLayout = ({ params }: { params: { slug: string } }) => {
           >
             {format(parseISO(post.date), "LLLL d, yyyy")}
           </time>
-          <h1 className="text-heading-2 font-extrabold leading-tight text-black-100 dark:text-gray-100">
+          <h1 className="text-heading-4 md:text-heading-3 lg:text-heading-2 font-extrabold leading-tight text-black-100 dark:text-gray-100">
             {post.title}
           </h1>
           <Link
             href={`/category/${post.category}`}
-            className="text-lg text-emerald-500"
+            className="text-paragraph-sm md:text-paragraph text-emerald-500"
           >
             {post.category}
           </Link>
         </div>
         <div
-          className="[&>*]:mb-3 [&>*:last-child]:mb-0 pb-8 prose prose-lg dark:prose-invert"
+          className="[&>*]:mb-3 [&>*:last-child]:mb-0 pb-8 prose md:prose-lg dark:prose-invert"
           dangerouslySetInnerHTML={{ __html: post.body.html }}
         />
       </article>

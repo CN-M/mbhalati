@@ -14,7 +14,8 @@ export const ContactMe = () => {
         <h3 className="text-heading-4 lg:text-left text-center md:text-heading-3 leading-heading font-light">
           Contact Me
         </h3>
-        <div className="text-paragraph-sm md:text-paragraph lg:text-heading-6 leading-paragraph md:space-y-4 space-y-4">
+        {/* <div className="text-paragraph-sm md:text-paragraph lg:text-heading-6 leading-paragraph md:space-y-4 space-y-4"> */}
+        <div className="text-paragraph-sm md:text-paragraph leading-paragraph md:space-y-4 space-y-4">
           <div>
             <p>
               I don’t know why you’d ever want to contact me, but if for some
@@ -33,7 +34,7 @@ export const ContactMe = () => {
             </p>
           </div>
           <hr />
-          <div className="space-y-1 lg:space-y-2 text-paragraph-sm md:text-paragraph lg:text-heading-6 leading-paragraph">
+          <div className="space-y-1 lg:space-y-2 text-paragraph-sm md:text-paragraph leading-paragraph">
             <Link href="mailto:c.n.mbhalati@gmail.com">
               <div className="flex items-center lg:space-x-2 space-x-1">
                 <Image
@@ -59,14 +60,11 @@ export const ContactMe = () => {
       <div className="h-full w-full 2xl:w-1/3 xl:w-1/2">
         <form className="flex flex-col h-full text-white text-paragraph leading-paragraph space-y-4">
           <div className="flex flex-col w-full md:space-y-2 space-y-1">
-            <label
-              className="lg:text-heading-6 md:text-paragraph text-paragraph-sm"
-              htmlFor=""
-            >
+            <label className=" md:text-paragraph text-paragraph-sm" htmlFor="">
               Name
             </label>
             <input
-              className="lg:p-4 py-2 px-3 lg:text-heading-6 md:text-paragraph text-paragraph-sm rounded-lg text-black-100 focus:outline-none"
+              className="lg:p-4 py-2 px-3  md:text-paragraph text-paragraph-sm rounded-lg text-black-100 focus:outline-none"
               type="text"
               placeholder="Name"
               required
@@ -74,14 +72,11 @@ export const ContactMe = () => {
             />
           </div>
           <div className="flex flex-col w-full md:space-y-2 space-y-1">
-            <label
-              className="lg:text-heading-6 md:text-paragraph text-paragraph-sm"
-              htmlFor=""
-            >
+            <label className=" md:text-paragraph text-paragraph-sm" htmlFor="">
               Email Address
             </label>
             <input
-              className="lg:p-4 py-2 px-3 lg:text-heading-6 md:text-paragraph text-paragraph-sm rounded-lg text-black-100 focus:outline-none"
+              className="lg:p-4 py-2 px-3  md:text-paragraph text-paragraph-sm rounded-lg text-black-100 focus:outline-none"
               type="email"
               placeholder="Email Adress"
               required
@@ -89,14 +84,11 @@ export const ContactMe = () => {
             />
           </div>
           <div className="flex flex-col w-full md:space-y-2 space-y-1">
-            <label
-              className="lg:text-heading-6 md:text-paragraph text-paragraph-sm"
-              htmlFor=""
-            >
+            <label className=" md:text-paragraph text-paragraph-sm" htmlFor="">
               Message
             </label>
             <textarea
-              className="h-48 w-full lg:p-4 py-2 px-3 lg:text-heading-6 md:text-paragraph text-paragraph-sm rounded-lg text-black-100 focus:outline-none resize-none"
+              className="h-48 w-full lg:p-4 py-2 px-3  md:text-paragraph text-paragraph-sm rounded-lg text-black-100 focus:outline-none resize-none"
               placeholder="We've been trying to reach you about your car's extended warranty."
             />
           </div>

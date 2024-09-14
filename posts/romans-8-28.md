@@ -7,7 +7,7 @@ coverImage: "/img/blog/church.jpg"
 
 Romans 8:28
 
-> **“And we know that all things work together for good to those who love God, to those who are the called according to His purpose.”**
+> And we know that all things work together for good to those who love God, to those who are the called according to His purpose.”
 
 And we know that all things work together for the good…  
 This verse has been a comfort of mine as of late. It is a subtle reminder that God is sovereign, kind, loving, and good.
@@ -16,7 +16,7 @@ The verse tells us that for those who love God and are called according to His p
 
 We can also couple this verse with **Jeremiah 29:11**, that says:
 
-> **“For I know the thoughts that I think toward you, says the LORD, thoughts of peace and not of evil, to give you a future and a hope.”**
+> For I know the thoughts that I think toward you, says the LORD, thoughts of peace and not of evil, to give you a future and a hope.
 
 Reading these two verses together might tempt one into falling into the trap of the prosperity gospel. The prosperity gospel teaches us that God only wants us to prosper. And as much as I believe this is true, the kind of prosperity God wants for us isn’t necessarily the kind of prosperity we’d prioritize for ourselves. The prosperity gospel often speaks of financial prospering, and not so much spiritual. It is a shortcut to receiving the gifts of God without having a relationship with God. It is an insidious thing, the prosperity gospel, it reduces God to being nothing but a sugar daddy, and not a father.
 
