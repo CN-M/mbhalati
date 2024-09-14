@@ -11,11 +11,9 @@ export const LetsGetJiggy = () => {
       href="https://youtu.be/3JcmQONgXJM?si=e2uGjnzdI-0AbdcH"
       target="_blank"
     >
-      <button className="hidden lg:block lg:px-8 lg:py-4 px-4 py-2 text-paragraph leading-paragraph font-medium bg-secondary text-black-100 rounded-lg">
-        <div className="flex space-x-4">
-          <p>Let's Get Jiggy</p>
-          <span role="img">🕺</span>
-        </div>
+      <button className="lg:px-8 lg:py-4 md:px-8 md:py-4 px-4 py-2 md:space-x-2 space-x-1 flex items-center justify-center 2xl:space-x-3 xl:space-x-2 2xl:px-8 2xl:py-4 2xl:text-paragraph lg:text-heading-6 md:text-paragraph text-paragraph-xs leading-paragraph font-medium bg-secondary text-black-100 rounded-lg">
+        <p>Let's Get Jiggy</p>
+        <span role="img">🕺</span>
       </button>
     </Link>
   );

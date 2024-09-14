@@ -19,7 +19,7 @@ import spotify from "@/public/icons/brands/Vector.svg";
 
 export const Hero = () => {
   return (
-    <section className="flex flex-col xl:flex-row lg:space-y-10 2xl:space-x-8 max-xl:space-y-8 items-center justify-center h-full md:h-screen w-full 2xl:px-32 lg:px-4 py-16 bg-primary">
+    <section className="flex flex-col xl:flex-row lg:space-y-10 2xl:space-x-8 max-xl:space-y-8 max-sm:space-y-4 items-center justify-center h-full md:h-screen w-full 2xl:px-32 lg:px-4 py-16 bg-primary">
       <div className="text-white md:space-y-2 space-y-1 text-center 2xl:w-4/5 md:w-full md:px-4">
         <h1 className="lg:text-heading-1 text-heading-4 md:text-heading-2 leading-heading font-bold">
           Hey. My name is C.N.
@@ -30,7 +30,7 @@ export const Hero = () => {
           <h3>Founder.</h3>
           <h3>And a Man Loved by Jesus.</h3>
         </div>
-        <div className="flex items-center justify-center md:pt-2 pt-1 md:space-x-4 space-x-2">
+        <div className="flex sm:flex-row flex-col items-center justify-center md:pt-2 pt-1 md:space-x-4 sm:space-x-2 max-sm:space-y-2">
           <GetToKnowMe />
           <WinTheLottery />
         </div>

@@ -6,20 +6,20 @@ export const Header = () => {
   return (
     <header
       id="home"
-      className="flex items-center justify-around h-full w-full bg-white text-black-100 2xl:py-4 2xl:px-16 md:py-2 md:px-8 py-1 px-4 "
+      className="flex items-center justify-between xl:justify-around h-full w-full bg-white text-black-100 xl:py-4 xl:px-8 md:py-4 lg:px-24 md:px-20 sm:px-16 py-2 px-8"
     >
-      <div className="">
+      <div>
         <Logo />
       </div>
-      <nav className="hidden lg:block">
-        <ul className="flex text-paragraph text-black-100 font-regular space-x-8 ">
+      <nav className="">
+        <ul className="hidden xl:flex text-paragraph text-black-100 font-regular space-x-8">
           <li>
             <Link className="hover:text-emerald-500" href="#home">
               Home
             </Link>
           </li>
           <li>
-            <Link className="hover:text-emerald-500" href="#home">
+            <Link className="hover:text-emerald-500" href="#blog">
               Blog
             </Link>
           </li>
@@ -34,7 +34,9 @@ export const Header = () => {
             </Link>
           </li>
         </ul>
+        {/* <Hamburger /> */}
       </nav>
+
       <LetsGetJiggy />
     </header>
   );
