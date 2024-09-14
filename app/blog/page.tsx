@@ -8,33 +8,30 @@ function PostCard(post: Post) {
   return (
     // <div className="mb-8 w-full">
     <div className="w-full">
-      {coverImage && (
-        <div className="h-full w-full mb-4">
-          <div className="w-full xl:h-[40vh] lg:h-[30vh] md:h-[25vh] sm:h-[20vh] h-[25vh] flex items-center justify-center">
-            <Image
-              // className="rounded-2xl w-full h-auto"
-              // className="rounded-2xl w-full object-cover"
-              className="rounded-2xl w-full h-full object-cover"
-              src={coverImage}
-              alt={title}
-              width={2000}
-              height={2000}
-            />
+      <Link href={post.url}>
+        {coverImage && (
+          <div className="h-full w-full mb-4">
+            <div className="w-full xl:h-[40vh] lg:h-[30vh] md:h-[25vh] sm:h-[20vh] h-[25vh] flex items-center justify-center">
+              <Image
+                // className="rounded-2xl w-full h-auto"
+                // className="rounded-2xl w-full object-cover"
+                className="rounded-2xl w-full h-full object-cover"
+                src={coverImage}
+                alt={title}
+                width={2000}
+                height={2000}
+              />
+            </div>
           </div>
-        </div>
-      )}
-      <h2 className="mb-1 text-xl">
-        <Link
-          href={post.url}
-          className="text-emerald-500 hover:text-emerald-400 "
-        >
+        )}
+        <h2 className="mb-1 text-xl text-emerald-500 hover:text-emerald-400 ">
           {post.title}
-        </Link>
-      </h2>
+        </h2>
 
-      <time dateTime={post.date} className="mb-2 block text-xs text-black-75">
-        {format(parseISO(post.date), "LLLL d, yyyy")}
-      </time>
+        <time dateTime={post.date} className="mb-2 block text-xs text-black-75">
+          {format(parseISO(post.date), "LLLL d, yyyy")}
+        </time>
+      </Link>
       <Link href={`/category/${post.category}`} className="text-emerald-500">
         {post.category}
       </Link>

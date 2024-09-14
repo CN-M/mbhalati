@@ -51,7 +51,7 @@ export const AboutMe = () => {
           </p>
           <p className="block lg:hidden">
             By the way. Do you see that photo right below? That guy right under
-            this paragraph? This isn&apos;t a photo of me. I just typed{" "}
+            this wall of text? This isn&apos;t a photo of me. I just typed{" "}
             <i>“handsome black man”</i> on <Link href="/">Unsplash</Link> and
             this was the first result.{" "}
           </p>
