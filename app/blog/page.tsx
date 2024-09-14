@@ -6,16 +6,21 @@ import Link from "next/link";
 function PostCard(post: Post) {
   const { title, coverImage } = post;
   return (
-    <div className="mb-8 w-full">
+    // <div className="mb-8 w-full">
+    <div className="w-full">
       {coverImage && (
         <div className="h-full w-full mb-4">
-          <Image
-            className="rounded-2xl w-full h-auto"
-            src={coverImage}
-            alt={title}
-            width={2000}
-            height={2000}
-          />
+          <div className="w-full xl:h-[40vh] lg:h-[30vh] md:h-[25vh] sm:h-[20vh] h-[15vh] flex items-center justify-center">
+            <Image
+              // className="rounded-2xl w-full h-auto"
+              // className="rounded-2xl w-full object-cover"
+              className="rounded-2xl w-full h-full object-cover"
+              src={coverImage}
+              alt={title}
+              width={2000}
+              height={2000}
+            />
+          </div>
         </div>
       )}
       <h2 className="mb-1 text-xl">
@@ -26,6 +31,7 @@ function PostCard(post: Post) {
           {post.title}
         </Link>
       </h2>
+
       <time dateTime={post.date} className="mb-2 block text-xs text-black-75">
         {format(parseISO(post.date), "LLLL d, yyyy")}
       </time>
@@ -42,13 +48,18 @@ export default function Blog() {
   );
 
   return (
-    <div className="mx-auto max-w-xl py-8">
-      <h1 className="mb-8 text-center text-2xl font-black">
-        Next.js + Contentlayer Example
-      </h1>
-      {posts.map((post, idx) => (
-        <PostCard key={idx} {...post} />
-      ))}
+    // <div className="mx-auto max-w-xl py-8">
+    <div className="mx-auto w-4/5 py-8 space-y-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 items-start justify-center gap-5 w-full">
+        {posts.slice(0, 2).map((post, idx) => (
+          <PostCard key={idx} {...post} />
+        ))}
+      </div>
+      <div className="grid lg:grid-cols-3 grid-cols-1 md:grid-cols-2 md:gap-6 justify-center items-start">
+        {posts.slice(2).map((post, idx) => (
+          <PostCard key={idx} {...post} />
+        ))}
+      </div>
     </div>
   );
 }

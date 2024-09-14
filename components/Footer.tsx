@@ -16,7 +16,7 @@ export const Footer = () => {
       <nav>
         <ul className="text-paragraph-sm items-center justify-center flex md:text-paragraph text-black-75 font-regular md:space-x-12 space-x-2">
           <li>
-            <Link className="hover:text-emerald-500" href="#home">
+            <Link className="hover:text-emerald-500" href="/#home">
               Home
             </Link>
           </li>
@@ -26,12 +26,12 @@ export const Footer = () => {
             </Link>
           </li>
           <li>
-            <Link className="hover:text-emerald-500" href="#about">
+            <Link className="hover:text-emerald-500" href="/#about">
               About
             </Link>
           </li>
           <li>
-            <Link className="hover:text-emerald-500" href="#contact">
+            <Link className="hover:text-emerald-500" href="/#contact">
               Contact
             </Link>
           </li>
