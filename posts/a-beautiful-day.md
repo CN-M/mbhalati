@@ -1,8 +1,8 @@
 ---
 title: "A Beautiful Day"
 date: "09 Jan, 2023"
-category: "Article"
 coverImage: "/img/blog/sunset.jpg"
+category: "Philosophical Musings"
 ---
 
 I stepped outside yesterday to enjoy some fresh air. When I looked up the sky was golden. It was a soft, warm orange and pink that blended into yellow. It's hard to describe. But it was beautiful.

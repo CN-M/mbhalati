@@ -1,7 +1,8 @@
 ---
 title: "Seeing Others"
 date: "21 Nov, 2022"
-category: "Article"
+category:
+  - "Philosophical Musings"
 coverImage: "/img/blog/cafe.jpg"
 ---
 

@@ -7,7 +7,16 @@ export const Post = defineDocumentType(() => ({
   filePathPattern: `**/*.md`,
   fields: {
     title: { type: "string", required: true },
-    category: { type: "string", required: true },
+    category: {
+      type: "list",
+      of: { type: "string" },
+      required: true,
+      // Categories:
+      // "Christian",
+      // "Short Story",
+      // "Technology",
+      // "Philosophical Musings",
+    },
     date: { type: "date", required: true },
     coverImage: { type: "string", required: false }, // Add coverImage field
   },

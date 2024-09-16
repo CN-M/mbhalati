@@ -10,7 +10,7 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: "C.N. Mbhalati",
+  title: "C.N. Mbhalati | Part-Time Astronaut",
   description: "The Profile of C.N. Mbhalati",
 };
 

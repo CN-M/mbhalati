@@ -1,7 +1,8 @@
 ---
 title: "A Death in the Family"
 date: "10 Oct, 2022"
-category: "Article"
+category:
+  - "Philosophical Musings"
 coverImage: "/img/blog/flowers.jpg"
 ---
 

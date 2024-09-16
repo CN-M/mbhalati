@@ -1,7 +1,8 @@
 ---
 title: "Vienna"
 date: "5 Dec, 2022"
-category: "Article"
+category:
+  - "Philosophical Musings"
 coverImage: "/img/blog/skyline.jpg"
 ---
 

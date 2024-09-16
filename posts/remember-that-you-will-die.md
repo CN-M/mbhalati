@@ -1,7 +1,8 @@
 ---
 title: "Remember That You Will Die"
 date: "7 Nov, 2022"
-category: "Article"
+category:
+  - "Philosophical Musings"
 coverImage: "/img/blog/skull.jpg"
 ---
 

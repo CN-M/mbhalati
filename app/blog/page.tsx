@@ -22,17 +22,29 @@ function PostCard(post: Post) {
             </div>
           </div>
         )}
-        <h2 className="mb-1 text-xl text-emerald-500 hover:text-emerald-400 ">
+      </Link>
+      <Link href={post.url}>
+        <h2 className="text-xl text-emerald-500 hover:text-emerald-400 ">
           {post.title}
         </h2>
-
-        <time dateTime={post.date} className="mb-2 block text-xs text-black-75">
+      </Link>
+      <div className="flex items-center space-x-2">
+        <Link
+          href={`/category/${post.category}`}
+          className="text-paragraph-sm font-medium text-black-75"
+        >
+          {post.category}
+        </Link>
+        <span>
+          <hr className="block border-l w-[1px] h-3 border-black-50" />
+        </span>
+        <time
+          dateTime={post.date}
+          className="block text-paragraph-xs font-medium text-black-75"
+        >
           {format(parseISO(post.date), "LLLL d, yyyy")}
         </time>
-      </Link>
-      <Link href={`/category/${post.category}`} className="text-emerald-500">
-        {post.category}
-      </Link>
+      </div>
     </div>
   );
 }
@@ -43,14 +55,13 @@ export default function Blog() {
   );
 
   return (
-    // <div className="mx-auto max-w-xl py-8">
     <div className="mx-auto w-4/5 py-8 space-y-8">
-      <div className="grid grid-cols-1 md:grid-cols-2 items-start justify-center gap-5 w-full">
+      <div className=" grid grid-cols-1 md:grid-cols-2 items-start justify-center gap-5 w-full">
         {posts.slice(0, 2).map((post, idx) => (
           <PostCard key={idx} {...post} />
         ))}
       </div>
-      <div className="grid lg:grid-cols-3 grid-cols-1 md:grid-cols-2 md:gap-6 justify-center items-start">
+      <div className="grid lg:grid-cols-3 grid-cols-1 md:grid-cols-2 md:gap-6 gap-5 justify-center items-start">
         {posts.slice(2).map((post, idx) => (
           <PostCard key={idx} {...post} />
         ))}

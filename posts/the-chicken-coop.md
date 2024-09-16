@@ -1,7 +1,8 @@
 ---
 title: "The Chicken Coop"
 date: "14 Nov, 2022"
-category: "Short Story"
+category:
+  - "Short Story"
 coverImage: "/img/blog/ship.jpg"
 ---
 

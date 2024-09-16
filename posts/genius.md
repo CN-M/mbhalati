@@ -1,7 +1,8 @@
 ---
 title: "Genius"
 date: "23 Jan, 2023"
-category: "Article"
+category:
+  - "Philosophical Musings"
 coverImage: "/img/blog/light-bulbs.jpg"
 ---
 
