@@ -88,7 +88,7 @@ export const Footer = () => {
           </span>
           <span className="text-black-75 text-paragraph-xs md:text-paragraph-sm">
             by{" "}
-            <Link href="/">
+            <Link href="https://www.instagram.com/marknormand/" target="_blank">
               <strong className="text-emerald-500">Kevin Hart</strong>
             </Link>
           </span>

@@ -12,7 +12,7 @@ function PostCard(post: Post) {
           <div className="h-full w-full mb-4">
             <div className="w-full xl:h-[40vh] lg:h-[30vh] md:h-[25vh] sm:h-[20vh] h-[25vh] flex items-center justify-center">
               <Image
-                className="rounded-2xl w-full h-full object-cover"
+                className="rounded-xl w-full h-full object-cover"
                 src={coverImage}
                 alt={title}
                 width={2000}

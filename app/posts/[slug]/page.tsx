@@ -23,7 +23,7 @@ const PostLayout = ({ params }: { params: { slug: string } }) => {
           <Image
             src={post.coverImage}
             alt={post.title}
-            className="rounded-2xl w-full h-full object-cover"
+            className="rounded-xl w-full h-full object-cover"
             height={2000}
             width={2000}
           />
