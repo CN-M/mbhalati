@@ -1,53 +1,62 @@
 "use client";
 
+import { navLinks } from "@/config/navLinks";
 import Link from "next/link";
 import { useState } from "react";
 
 export const MobileMenu = () => {
-  const [menuOpen, setMenuOpen] = useState(false);
+  const [open, setOpen] = useState(false);
 
   const toggleMenu = () => {
-    setMenuOpen(!menuOpen);
+    setOpen(!open);
   };
 
   return (
     <>
-      {/* Hamburger Menu */}
-      <button
-        id="menu-btn"
-        // className={`block relative w-6 h-2 transition-all duration-300 focus:outline-none md:hidden ${menuOpen ? "open" : ""}`}
-        className={`flex flex-col items-center relative w-6 h-2 transition-all duration-300 focus:outline-none md:hidden ${menuOpen ? "open" : ""}`}
-        onClick={toggleMenu}
-      >
-        <span
-          className={`absolute top-1 left-0 w-6 h-0.5 rounded-lg bg-emerald-500 transition-transform duration-500 ${
-            menuOpen ? "rotate-45 " : "translate-y-0"
-          }`}
-        ></span>
-        <span
-          className={`absolute left-0 w-6 h-0.5 rounded-lg bg-emerald-500 transition-all duration-500 ${
-            menuOpen ? "hidden" : "translate-y-2"
-          }`}
-        ></span>
-        <span
-          className={`absolute bottom-0 left-0 w-6 h-0.5 rounded-lg bg-emerald-500 transition-transform duration-500 ${
-            menuOpen ? "-rotate-45" : "translate-y-3"
-          }`}
-        ></span>
-      </button>
+      <div className="md:hidden flex items-center justify-center">
+        <button onClick={toggleMenu}>
+          <div
+            className={`${open ? "tham-active" : ""} tham tham-e-spin tham-w-7`}
+          >
+            <div className="tham-box">
+              <div className="tham-inner bg-primary" />
+            </div>
+          </div>
+        </button>
 
-      {/* Mobile Menu */}
-      <div
-        className={`absolute flex-col items-center self-end py-8 mt-96 space-y-6 font-bold bg-white sm:w-auto sm:self-center left-6 right-6 drop-shadow-md md:hidden transition-all duration-500 ${
-          menuOpen ? "flex" : "hidden"
-        }`}
-        id="menu"
-      >
-        <Link href="#pricing">Pricing</Link>
-        <Link href="#product">Product</Link>
-        <Link href="#about">About Us</Link>
-        <Link href="#careers">Careers</Link>
-        <Link href="#community">Community</Link>
+        <div
+          className={`fixed top-0 right-0 h-screen w-64 bg-white z-50 transform ${
+            open ? "translate-x-0" : "translate-x-full"
+          } transition-transform duration-300 ease-in-out shadow-lg`}
+        >
+          <button
+            onClick={toggleMenu}
+            className="absolute top-4 right-4 text-black-100"
+          >
+            ✖
+          </button>
+          <ul className="flex flex-col items-center justify-center space-y-6 h-full text-black-100 font-regular">
+            {navLinks.map(({ text, href }, idx) => (
+              <li key={idx}>
+                <Link
+                  onClick={toggleMenu}
+                  className="hover:text-emerald-500"
+                  href={href}
+                >
+                  {text}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        {/* Backdrop (optional, for a nice effect when the drawer is open) */}
+        {open && (
+          <div
+            className="fixed inset-0 bg-black opacity-50 z-40"
+            onClick={toggleMenu}
+          />
+        )}
       </div>
     </>
   );

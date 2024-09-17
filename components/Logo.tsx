@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export const Logo = () => {
   return (
-    <Link href="/">
+    <Link className="hidden md:block" href="/">
       <div className="flex items-center space-x-2">
         <Image
           className="rounded-full xl:h-18 xl:w-18 lg:h-18 lg:w-18 md:h-16 md:w-16 h-10 w-10"
