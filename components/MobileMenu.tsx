@@ -40,7 +40,7 @@ export const MobileMenu = () => {
               <li key={idx}>
                 <Link
                   onClick={toggleMenu}
-                  className="hover:text-emerald-500"
+                  className="text-heading-6 hover:text-emerald-500"
                   href={href}
                 >
                   {text}
@@ -50,10 +50,9 @@ export const MobileMenu = () => {
           </ul>
         </div>
 
-        {/* Backdrop (optional, for a nice effect when the drawer is open) */}
         {open && (
           <div
-            className="fixed inset-0 bg-black opacity-50 z-40"
+            className="fixed inset-0 bg-black-100 opacity-50 z-40"
             onClick={toggleMenu}
           />
         )}
