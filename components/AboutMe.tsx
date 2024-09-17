@@ -1,10 +1,13 @@
 import halfsies from "@/public/img/halfsies.jpeg";
 import handsomeBlackMan from "@/public/img/handsome-black-man.jpg";
 
+import { socialLinks } from "@/config/socialLinks";
 import Image from "next/image";
 import Link from "next/link";
 
 export const AboutMe = () => {
+  const spotifyLink = socialLinks.filter((link) => link.name == "Spotify")[0]
+    .href;
   return (
     <section
       id="about"
@@ -27,14 +30,14 @@ export const AboutMe = () => {
           </p>
           <p>
             I have a{" "}
-            <Link href="/">
+            <Link href="/articles">
               <strong className="text-emerald-500">blog</strong>
             </Link>{" "}
             I haven&apos;t updated in a while.
           </p>
           <p>
             I have a{" "}
-            <Link href="/">
+            <Link href={spotifyLink} target="_blank">
               <strong className="text-emerald-500">podcast</strong>
             </Link>
             , too. It kind of sucks, but it&apos;ll get better.
@@ -44,8 +47,8 @@ export const AboutMe = () => {
             <strong>what I want</strong>.
           </p>
           <p className="hidden lg:block">
-            By the way. Do you see that photo right there? Next to this
-            paragraph? This isn&apos;t a photo of me. I just typed
+            By the way. Do you see that photo right there? Next to this wall of
+            text? This isn&apos;t a photo of me. I just typed
             <i>“handsome black man”</i> on <Link href="/">Unsplash</Link> and
             this was the first result.{" "}
           </p>

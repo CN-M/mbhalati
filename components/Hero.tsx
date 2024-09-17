@@ -6,13 +6,6 @@ import { GetToKnowMe, WinTheLottery } from "./Buttons";
 
 import { socialLinks } from "@/config/socialLinks";
 
-import xTwitter from "@/public/icons/brands/Frame-1.svg";
-import dribbble from "@/public/icons/brands/Frame-2.svg";
-import linkedIn from "@/public/icons/brands/Frame-3.svg";
-import instagram from "@/public/icons/brands/Frame-4.svg";
-import github from "@/public/icons/brands/Frame.svg";
-import spotify from "@/public/icons/brands/Vector.svg";
-
 export const Hero = () => {
   return (
     <section className="flex flex-col xl:flex-row lg:space-y-10 2xl:space-x-8 max-xl:space-y-8 max-sm:space-y-4 items-center justify-center h-full md:h-screen w-full 2xl:px-32 lg:px-4 px-2 py-16 bg-primary">
@@ -54,44 +47,15 @@ export const Hero = () => {
         </div>
 
         <div className="flex items-center justify-center md:flex-row 2xl:space-x-14 xl:space-x-8 md:space-x-14 space-x-6 text-black-50">
-          <Link href={socialLinks.github} target="_blank">
-            <Image src={github} alt="Brand" className="md:w-9 md:h-9 h-5 w-5" />
-          </Link>
-          <Link href={socialLinks.xTwitter} target="_blank">
-            <Image
-              src={xTwitter}
-              alt="Brand"
-              className="md:w-9 md:h-9 h-5 w-5"
-            />
-          </Link>
-          <Link href={socialLinks.linkedIn} target="_blank">
-            <Image
-              src={linkedIn}
-              alt="Brand"
-              className="md:w-9 md:h-9 h-5 w-5"
-            />
-          </Link>
-          <Link href={socialLinks.dribbble} target="_blank">
-            <Image
-              src={dribbble}
-              alt="Brand"
-              className="md:w-9 md:h-9 h-5 w-5"
-            />
-          </Link>
-          <Link href={socialLinks.instagram} target="_blank">
-            <Image
-              src={instagram}
-              alt="Brand"
-              className="md:w-9 md:h-9 h-5 w-5"
-            />
-          </Link>
-          <Link href={socialLinks.spotify} target="_blank">
-            <Image
-              src={spotify}
-              alt="Brand"
-              className="md:w-9 md:h-9 h-5 w-5"
-            />
-          </Link>
+          {socialLinks.map(({ name, lightIcon, href }, idx) => (
+            <Link key={idx} href={href} target="_blank">
+              <Image
+                src={lightIcon}
+                alt={`${name} social icon`}
+                className="md:w-9 md:h-9 h-5 w-5"
+              />
+            </Link>
+          ))}
         </div>
       </div>
     </section>
