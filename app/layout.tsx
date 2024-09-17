@@ -16,7 +16,7 @@ async function sharedMetaData() {
       default: "C.N. Mbhalati | Part-Time Astronaut",
     },
     description:
-      "Hey my name is C.N. I'm a Software Engineer. UI/UX Designer. Founder. And a Man Loved by Jesus.",
+      "Hey. My name is C.N. I'm a Software Engineer. UI/UX Designer. Founder. And a Man Loved by Jesus.",
     keywords: ["Warren Buffett", "Tech", "Startup", "Christian"],
     authors: [{ name: "C.N. Mbhalati" }],
     canonical: "https://cn.mbhalati.com/",
