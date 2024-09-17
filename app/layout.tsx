@@ -20,16 +20,7 @@ async function sharedMetaData() {
     keywords: ["Warren Buffett", "Tech", "Startup", "Christian"],
     authors: [{ name: "C.N. Mbhalati" }],
     canonical: "https://cn.mbhalati.com/",
-    openGraph: {
-      images: [
-        {
-          url: "/opengraph.bmp",
-          // urlForImage(settings?.openGraphImage)?.src ||
-          width: 800,
-          height: 600,
-        },
-      ],
-    },
+
     twitter: {
       title: "C.N. Mbhalati | Part-Time Astronaut",
       card: "summary_large_image",
