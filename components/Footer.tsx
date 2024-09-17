@@ -21,8 +21,8 @@ export const Footer = () => {
             </Link>
           </li>
           <li>
-            <Link className="hover:text-emerald-500" href="/blog">
-              Blog
+            <Link className="hover:text-emerald-500" href="/articles">
+              Articles
             </Link>
           </li>
           <li>

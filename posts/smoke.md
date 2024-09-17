@@ -1,8 +1,7 @@
 ---
 title: "Smoke"
 date: " 16 Jan, 2023"
-category:
-  - "Short Story"
+category: "Short Story"
 coverImage: "/img/blog/city.jpg"
 ---
 

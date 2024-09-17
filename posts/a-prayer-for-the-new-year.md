@@ -1,8 +1,7 @@
 ---
 title: "A Prayer for the New Year"
 date: "02 Jan, 2023"
-category:
-  - "Philosophical Musings"
+category: "Philosophical Musings"
 coverImage: "/img/blog/sparklers.jpg"
 ---
 

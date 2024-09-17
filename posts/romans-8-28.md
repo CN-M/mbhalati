@@ -1,9 +1,7 @@
 ---
 title: "Romans 8:28"
 date: "06 Feb, 2023"
-category:
-  - "Christian"
-  - "Philosophical Musings"
+category: "Christian"
 coverImage: "/img/blog/church.jpg"
 ---
 

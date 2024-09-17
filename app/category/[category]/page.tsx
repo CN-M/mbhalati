@@ -2,12 +2,17 @@ import { Post, allPosts } from "contentlayer/generated";
 import { compareDesc, format, parseISO } from "date-fns";
 import Image from "next/image";
 import Link from "next/link";
+import slugify from "slugify";
 
 function PostCard(post: Post) {
-  const { title, coverImage } = post;
+  const { title, coverImage, category, date } = post;
+
+  const postUrl = slugify(title, { lower: true }).replaceAll(":", "-");
+  const cat = slugify(category, { lower: true });
+
   return (
     <div className="w-full">
-      <Link href={post.url}>
+      <Link href={`/${postUrl}`}>
         {coverImage && (
           <div className="h-full w-full mb-4">
             <div className="w-full xl:h-[40vh] lg:h-[30vh] md:h-[25vh] sm:h-[20vh] h-[25vh] flex items-center justify-center">
@@ -23,36 +28,39 @@ function PostCard(post: Post) {
           </div>
         )}
       </Link>
-      <Link href={post.url}>
+      <Link href={`/${postUrl}`}>
         <h2 className="text-xl text-emerald-500 hover:text-emerald-400 ">
-          {post.title}
+          {title}
         </h2>
       </Link>
       <div className="flex items-center space-x-2">
         <Link
-          href={`/category/${post.category}`}
+          href={`/category/${cat}`}
           className="text-paragraph-sm font-medium text-black-75"
         >
-          {post.category}
+          {category}
         </Link>
         <span>
           <hr className="block border-l w-[1px] h-3 border-black-50" />
         </span>
         <time
-          dateTime={post.date}
+          dateTime={date}
           className="block text-paragraph-xs font-medium text-black-75"
         >
-          {format(parseISO(post.date), "LLLL d, yyyy")}
+          {format(parseISO(date), "LLLL d, yyyy")}
         </time>
       </div>
     </div>
   );
 }
 
-export default function Blog() {
-  const posts = allPosts.sort((a, b) =>
-    compareDesc(new Date(a.date), new Date(b.date))
-  );
+export default function Blog({ params }: { params: { category: string } }) {
+  const { category } = params;
+  const cat = slugify(category, { lower: true });
+
+  const posts = allPosts
+    .filter((post) => slugify(post.category, { lower: true }) == cat)
+    .sort((a, b) => compareDesc(new Date(a.date), new Date(b.date)));
 
   return (
     <div className="mx-auto w-4/5 py-8 space-y-8">

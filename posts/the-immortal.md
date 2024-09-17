@@ -1,8 +1,7 @@
 ---
 title: "The Immortal"
 date: " 17 Oct, 2022"
-category:
-  - "Short Story"
+category: "Short Story"
 coverImage: "/img/blog/candle.jpg"
 ---
 

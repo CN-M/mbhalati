@@ -1,8 +1,7 @@
 ---
 title: "Allowing Others to Change"
 date: "24 Oct, 2022"
-category:
-  - "Philosophical Musings"
+category: "Philosophical Musings"
 coverImage: "/img/blog/butterfly.jpg"
 ---
 

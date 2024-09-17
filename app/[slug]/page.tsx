@@ -2,6 +2,7 @@ import { allPosts } from "contentlayer/generated";
 import { format, parseISO } from "date-fns";
 import Image from "next/image";
 import Link from "next/link";
+import slugify from "slugify";
 
 export const generateStaticParams = async () =>
   allPosts.map((post) => ({ slug: post._raw.flattenedPath }));
@@ -15,6 +16,10 @@ export const generateMetadata = ({ params }: { params: { slug: string } }) => {
 const PostLayout = ({ params }: { params: { slug: string } }) => {
   const post = allPosts.find((post) => post._raw.flattenedPath === params.slug);
   if (!post) throw new Error(`Post not found for slug: ${params.slug}`);
+
+  const { title, category } = post;
+
+  const cat = slugify(category, { lower: true });
 
   return (
     <div className="flex flex-col h-full w-full items-center justify-center">
@@ -41,7 +46,7 @@ const PostLayout = ({ params }: { params: { slug: string } }) => {
             {post.title}
           </h1>
           <Link
-            href={`/category/${post.category}`}
+            href={`/category/${cat}`}
             className="text-paragraph-sm md:text-paragraph text-emerald-500"
           >
             {post.category}
