@@ -34,5 +34,6 @@ Now. This can either set you free or it can trap you even further. Some of us br
 
 Make the conscious effort to see others through a more understanding lens. It’ll make you happier and your relationships stronger. Be kind to others. See them.
 
-Vienna waits for you.  
+Vienna waits for you.
+
 — C.N.M.

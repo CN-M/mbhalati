@@ -71,8 +71,9 @@ It's that feeling of belonging, of relief, of love, of freedom, that makes this 
 
 It's essential to experience moments of infinity for ourselves. To feel unstoppable, and loved, and seen, and calm but excited. Vienna reminds me to take a deep breath when I need it. I hope this reminded you to breathe. So breathe. See you later.
 
-Vienna waits for you.  
-— C.N.
+Vienna waits for you.
+
+— C.N.M.
 
 **Some Unsolicited Advice:**
 
