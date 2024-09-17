@@ -2,7 +2,7 @@ import location from "@/public/contact/Frame-1.svg";
 import email from "@/public/contact/Frame.svg";
 import Image from "next/image";
 import Link from "next/link";
-import { SendMessage } from "./Buttons";
+import { ContactForm } from "./ContactForm";
 
 export const ContactMe = () => {
   return (
@@ -35,7 +35,7 @@ export const ContactMe = () => {
           </div>
           <hr />
           <div className="space-y-1 lg:space-y-2 text-paragraph-sm md:text-paragraph leading-paragraph">
-            <Link href="mailto:c.n.mbhalati@gmail.com">
+            <Link href="mailto:cn.mbhalati@gmail.com">
               <div className="flex items-center lg:space-x-2 space-x-1">
                 <Image
                   src={email}
@@ -43,7 +43,7 @@ export const ContactMe = () => {
                   className="lg:h-6 lg:w-6 h-4 w-4"
                 />
 
-                <p>c.n.mbhalati@gmail.com</p>
+                <p>cn.mbhalati@gmail.com</p>
               </div>
             </Link>
             <div className="flex items-center lg:space-x-2 space-x-1">
@@ -57,44 +57,7 @@ export const ContactMe = () => {
           </div>
         </div>
       </div>
-      <div className="h-full w-full 2xl:w-1/3 xl:w-1/2">
-        <form className="flex flex-col h-full text-white text-paragraph leading-paragraph space-y-4">
-          <div className="flex flex-col w-full md:space-y-2 space-y-1">
-            <label className=" md:text-paragraph text-paragraph-sm" htmlFor="">
-              Name
-            </label>
-            <input
-              className="lg:p-4 py-2 px-3  md:text-paragraph text-paragraph-sm rounded-lg text-black-100 focus:outline-none"
-              type="text"
-              placeholder="Name"
-              required
-              min={1}
-            />
-          </div>
-          <div className="flex flex-col w-full md:space-y-2 space-y-1">
-            <label className=" md:text-paragraph text-paragraph-sm" htmlFor="">
-              Email Address
-            </label>
-            <input
-              className="lg:p-4 py-2 px-3  md:text-paragraph text-paragraph-sm rounded-lg text-black-100 focus:outline-none"
-              type="email"
-              placeholder="Email Adress"
-              required
-              min={1}
-            />
-          </div>
-          <div className="flex flex-col w-full md:space-y-2 space-y-1">
-            <label className=" md:text-paragraph text-paragraph-sm" htmlFor="">
-              Message
-            </label>
-            <textarea
-              className="h-48 w-full lg:p-4 py-2 px-3  md:text-paragraph text-paragraph-sm rounded-lg text-black-100 focus:outline-none resize-none"
-              placeholder="We've been trying to reach you about your car's extended warranty."
-            />
-          </div>
-          <SendMessage />
-        </form>
-      </div>
+      <ContactForm />
     </section>
   );
 };

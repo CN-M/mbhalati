@@ -17,7 +17,7 @@ export default function CategoryPage({
     .sort((a, b) => compareDesc(new Date(a.date), new Date(b.date)));
 
   return (
-    <div className="mx-auto w-w-11/12 py-8 space-y-8">
+    <div className="mx-auto xl:w-4/5 w-11/12 py-8 space-y-8">
       <div className=" grid grid-cols-1 md:grid-cols-2 items-start justify-center gap-5 w-full">
         {posts.slice(0, 2).map((post, idx) => (
           <PostCard key={idx} {...post} />

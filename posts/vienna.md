@@ -11,15 +11,7 @@ About a year ago I wrote the first issue of [The Narrative](https://www.getrevue
 
 Vienna is a song written by [Billy Joel](https://en.wikipedia.org/wiki/Billy_Joel?utm_campaign=The%20Narrative&utm_medium=email&utm_source=Revue%20newsletter). If you haven't heard of Billy Joel already, then I have one question for you: How does it feel to live life for so long without knowing what GOOD MUSIC sounds like?
 
-[Vienna](https://www.youtube.com/watch?ab_channel=billyjoelVEVO&utm_campaign=The%20Narrative&utm_medium=email&utm_source=Revue%20newsletter&v=wccRif2DaGs) was a song featured on his 1977 album [The Stranger](<https://en.wikipedia.org/wiki/The_Stranger_(album)?utm_campaign=The%20Narrative&utm_medium=email&utm_source=Revue%20newsletter>). Mr. Joel even mentioned how it was one of his two favourite songs, along with "[Summer, Highland Falls](https://www.youtube.com/watch?ab_channel=harrybelly&utm_campaign=The%20Narrative&utm_medium=email&utm_source=Revue%20newsletter&v=ygNNpvzuNFA)." And even though it's one of his favourites, it never actually came out as a single from his 1977 album. Even so, it's a universally loved song and I need to see Billy Joel perform it live at least once in my life. It's one of my favourite songs of all time by any artist in any genre. If you haven't already heard it, then **GO LISTEN TO IT NOW** :
-
-<iframe 
-    src="https://www.youtube.com/embed/wccRif2DaGs" 
-    title="Billy Joel - Vienna" 
-    frameborder="0" 
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-    allowfullscreen>
-</iframe>
+[Vienna](https://www.youtube.com/watch?ab_channel=billyjoelVEVO&utm_campaign=The%20Narrative&utm_medium=email&utm_source=Revue%20newsletter&v=wccRif2DaGs) was a song featured on his 1977 album [The Stranger](<https://en.wikipedia.org/wiki/The_Stranger_(album)?utm_campaign=The%20Narrative&utm_medium=email&utm_source=Revue%20newsletter>). Mr. Joel even mentioned how it was one of his two favourite songs, along with "[Summer, Highland Falls](https://www.youtube.com/watch?ab_channel=harrybelly&utm_campaign=The%20Narrative&utm_medium=email&utm_source=Revue%20newsletter&v=ygNNpvzuNFA)." And even though it's one of his favourites, it never actually came out as a single from his 1977 album. Even so, it's a universally loved song and I need to see Billy Joel perform it live at least once in my life. It's one of my favourite songs of all time by any artist in any genre. If you haven't already heard it, then [**GO LISTEN TO IT NOW**](https://youtu.be/wccRif2DaGs?si=7WSyyIZ4kgCcYbhB)
 
 **Short Background**
 

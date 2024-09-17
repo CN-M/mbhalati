@@ -52,14 +52,25 @@ export const WinTheLottery = () => {
   );
 };
 
-export const SendMessage = () => {
+export const SendMessage = ({ isSubmitting }: { isSubmitting: boolean }) => {
   return (
     <button
       type="submit"
       className="font-regular lg:px-8 lg:py-4 px-4 py-2 flex items-center justify-center w-full md:space-x-4 space-x-2 text-paragraph-sm md:text-paragraph leading-paragraph text-white md:font-normal bg-tertiary rounded-lg"
+      disabled={isSubmitting}
     >
-      <span>Send Message</span>
-      <Image src={paperPlane} alt="Brand" className="md:h-5 md:w-5 h-4 w-4" />
+      {isSubmitting ? (
+        "Sending..."
+      ) : (
+        <>
+          <span>Send Message</span>
+          <Image
+            src={paperPlane}
+            alt="Brand"
+            className="md:h-5 md:w-5 h-4 w-4"
+          />
+        </>
+      )}
     </button>
   );
 };

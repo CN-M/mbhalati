@@ -8,7 +8,7 @@ export const Footer = () => {
   return (
     <footer className="border-t border-black-10 flex flex-col items-center justify-center w-full bg-white lg:space-y-8 lg:py-16 space-y-6 md:p-8 py-4">
       <nav>
-        <ul className="hidden xl:flex text-paragraph text-black-100 font-regular space-x-8">
+        <ul className="text-paragraph-sm items-center justify-center flex md:text-paragraph text-black-75 font-regular md:space-x-12 space-x-2">
           {navLinks.map(({ text, href }, idx) => (
             <li key={idx}>
               <Link className="hover:text-emerald-500" href={href}>

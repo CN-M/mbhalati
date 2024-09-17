@@ -7,7 +7,7 @@ coverImage: "/img/blog/church.jpg"
 
 Romans 8:28
 
-> And we know that all things work together for good to those who love God, to those who are the called according to His purpose.”
+> And we know that all things work together for good to those who love God, to those who are the called according to His purpose.
 
 And we know that all things work together for the good…  
 This verse has been a comfort of mine as of late. It is a subtle reminder that God is sovereign, kind, loving, and good.
