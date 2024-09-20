@@ -14,7 +14,7 @@ export const PostCard = (post: Post) => {
     <div className="w-full">
       <Link href={`/${postUrl}`}>
         {coverImage && (
-          <div className="h-full w-full mb-4">
+          <div className="h-full w-full mb-2">
             <div className="w-full xl:h-[40vh] lg:h-[30vh] md:h-[25vh] sm:h-[20vh] h-[25vh] flex items-center justify-center">
               <Image
                 className="rounded-xl w-full h-full object-cover"
