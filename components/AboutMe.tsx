@@ -20,7 +20,7 @@ export const AboutMe = () => {
         <div className="md:text-paragraph text-paragraph-sm leading-paragraph align-left space-y-2">
           <p>
             I hail from the <strong>southern most country</strong> on the{" "}
-            <strong>content of Africa</strong>. You guessed it! South Africa!
+            <strong>continent of Africa</strong>. You guessed it! South Africa!
             Creative, right?
           </p>
           <p>
