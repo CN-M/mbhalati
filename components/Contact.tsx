@@ -24,8 +24,8 @@ export const ContactMe = () => {
             </p>
             <br />
             <p>
-              Just don’t try and sign me up for Pornhub or something. I already
-              have an account. 💁🏾‍♂️
+              Just don’t try and sign me up for any dating sites — my inbox
+              can’t handle any more rejection.💁🏾‍♂️
             </p>
             <br />
             <p>
