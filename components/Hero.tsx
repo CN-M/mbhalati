@@ -32,6 +32,7 @@ export const Hero = () => {
             src={logo}
             alt="C.N. Mbhalati profile picture Logo"
             priority
+            placeholder="blur"
           />
           <div className="text-center">
             <h4 className="font-medium lg:text-heading-6 text-paragraph-sm md:text-paragraph leading-paragraph">

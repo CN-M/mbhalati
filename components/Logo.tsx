@@ -11,6 +11,7 @@ export const Logo = () => {
           src={logo}
           alt="C.N. Mbhalati profile picture Logo"
           priority
+          placeholder="blur"
         />
         <p className="hidden xl:block text-paragraph text-black-100 hover:text-emerald-500">
           @cn_mbhalati
