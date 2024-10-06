@@ -10,17 +10,30 @@ const montserrat = Montserrat({
 
 async function sharedMetaData() {
   return {
-    // enable this for resolving opengraph image
     metadataBase: new URL("https://cn.mbhalati.com/"),
     title: {
       default: "C.N. Mbhalati | Part-Time Astronaut",
     },
     description:
-      "Hey. My name is C.N. I'm a Software Engineer. UI/UX Designer. Founder. And a Man Loved by Jesus.",
-    keywords: ["Warren Buffett", "Tech", "Startup", "Christian"],
+      "Hey. My name is C.N. I'm a Software Engineer. UI/UX Designer. Founder. Writer. And a Man Loved by Jesus.",
+    keywords: [
+      "Warren Buffett",
+      "Tech",
+      "Startup",
+      "Christian",
+      "Short Stories",
+    ],
     authors: [{ name: "C.N. Mbhalati" }],
     canonical: "https://cn.mbhalati.com/",
-
+    openGraph: {
+      images: [
+        {
+          url: "/img/opengraph.jpg",
+          width: 800,
+          height: 600,
+        },
+      ],
+    },
     twitter: {
       title: "C.N. Mbhalati | Part-Time Astronaut",
       card: "summary_large_image",

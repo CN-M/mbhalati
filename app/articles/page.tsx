@@ -3,6 +3,15 @@ import { compareDesc } from "date-fns";
 
 import { PostCard } from "@/components/PostCard";
 
+export async function generateMetadata() {
+  return {
+    title: "Articles",
+    description: "View all articles.",
+  };
+}
+
+export const dynamic = "force-dynamic";
+
 export default function Articles() {
   const posts = allPosts.sort((a, b) =>
     compareDesc(new Date(a.date), new Date(b.date))

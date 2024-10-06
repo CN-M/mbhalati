@@ -10,14 +10,42 @@ export const generateStaticParams = async () =>
 export const generateMetadata = ({ params }: { params: { slug: string } }) => {
   const post = allPosts.find((post) => post._raw.flattenedPath === params.slug);
   if (!post) throw new Error(`Post not found for slug: ${params.slug}`);
-  return { title: `${post.title} | C.N. Mbhalati` };
+
+  const generateExcerpt = (html: string, maxLength: number = 160) => {
+    const plainText = html
+      .replace(/<[^>]+>/g, "")
+      .replace(/\n/g, " ")
+      .replace(/\s+/g, " ")
+      .trim();
+
+    return plainText.length > maxLength
+      ? plainText.slice(0, maxLength) + "..."
+      : plainText;
+  };
+
+  const excerpt = generateExcerpt(post.body.html);
+
+  return {
+    title: `${post.title} | C.N. Mbhalati`,
+    description: excerpt,
+    openGraph: {
+      images: [
+        {
+          url: `${post.coverImage}`,
+          width: 800,
+          height: 600,
+        },
+      ],
+    },
+  };
 };
 
 const PostLayout = ({ params }: { params: { slug: string } }) => {
   const post = allPosts.find((post) => post._raw.flattenedPath === params.slug);
+
   if (!post) throw new Error(`Post not found for slug: ${params.slug}`);
 
-  const { title, category } = post;
+  const { title, category, date } = post;
 
   const cat = slugify(category, { lower: true });
 
@@ -27,7 +55,7 @@ const PostLayout = ({ params }: { params: { slug: string } }) => {
         <div className="my-6 xl:w-4/5 w-full xl:h-[80vh] lg:h-[60vh] md:h-[50vh] sm:h-[40vh] h-[30vh] px-5 flex items-center justify-center">
           <Image
             src={post.coverImage}
-            alt={post.title}
+            alt={title}
             className="rounded-xl w-full h-full object-cover"
             height={2000}
             width={2000}
@@ -37,19 +65,19 @@ const PostLayout = ({ params }: { params: { slug: string } }) => {
       <article className="flex flex-col items-center justify-center w-full px-6 h-full">
         <div className="mb-8 text-center">
           <time
-            dateTime={post.date}
+            dateTime={date}
             className="mb-2 text-paragraph-sm text-black-75"
           >
-            {format(parseISO(post.date), "LLLL d, yyyy")}
+            {format(parseISO(date), "LLLL d, yyyy")}
           </time>
           <h1 className="text-heading-4 md:text-heading-3 lg:text-heading-2 font-extrabold leading-tight text-black-100">
-            {post.title}
+            {title}
           </h1>
           <Link
             href={`/category/${cat}`}
             className="text-paragraph-sm md:text-paragraph text-emerald-500"
           >
-            {post.category}
+            {category}
           </Link>
         </div>
         <div
@@ -62,3 +90,5 @@ const PostLayout = ({ params }: { params: { slug: string } }) => {
 };
 
 export default PostLayout;
+
+export const revalidate = 60;

@@ -4,6 +4,32 @@ import slugify from "slugify";
 
 import { PostCard } from "@/components/PostCard";
 
+export const generateStaticParams = async () => {
+  const categories = new Set<string>();
+
+  const sortedPosts = allPosts.sort((a, b) =>
+    compareDesc(new Date(a.date), new Date(b.date))
+  );
+
+  sortedPosts.forEach(({ category }) => categories.add(category));
+
+  const categoriesArr = Array.from(categories);
+
+  return categoriesArr;
+};
+
+export async function generateMetadata({ params }: { params: any }) {
+  const { category } = params;
+  const title = category
+    .split("-")
+    .map((word: string) => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(" ");
+
+  return { title };
+}
+
+export const dynamic = "force-dynamic";
+
 export default function CategoryPage({
   params,
 }: {
