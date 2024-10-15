@@ -6,6 +6,7 @@ import { SendMessage } from "./Buttons";
 export const ContactForm = () => {
   const [formData, setFormData] = useState({
     name: "",
+    surname: "",
     email: "",
     message: "",
   });
@@ -40,7 +41,7 @@ export const ContactForm = () => {
       }
 
       setSuccess("Message sent successfully!");
-      setFormData({ name: "", email: "", message: "" });
+      setFormData({ name: "", surname: "", email: "", message: "" });
     } catch (error: any) {
       setError(error.message || "Something went wrong");
     } finally {
@@ -54,17 +55,33 @@ export const ContactForm = () => {
         onSubmit={handleSubmit}
         className="flex flex-col h-full text-white text-paragraph leading-paragraph space-y-4"
       >
-        <div className="flex flex-col w-full md:space-y-2 space-y-1">
-          <label className="md:text-paragraph text-paragraph-sm">Name</label>
-          <input
-            className="lg:p-4 py-2 px-3 md:text-paragraph text-paragraph-sm rounded-lg text-black-100 focus:outline-none"
-            type="text"
-            placeholder="Name"
-            name="name"
-            value={formData.name}
-            onChange={handleChange}
-            required
-          />
+        <div className="flex flex-col 3xl:flex-row max-3xl:space-y-4 3xl:space-x-4 w-full">
+          <div className="flex flex-col w-full md:space-y-2 space-y-1">
+            <label className="md:text-paragraph text-paragraph-sm">Name</label>
+            <input
+              className="lg:p-4 py-2 px-3 md:text-paragraph text-paragraph-sm rounded-lg text-black-100 focus:outline-none"
+              type="text"
+              placeholder="Name"
+              name="name"
+              value={formData.name}
+              onChange={handleChange}
+              required
+            />
+          </div>
+          <div className="flex flex-col w-full md:space-y-2 space-y-1">
+            <label className="md:text-paragraph text-paragraph-sm">
+              Surname
+            </label>
+            <input
+              className="lg:p-4 py-2 px-3 md:text-paragraph text-paragraph-sm rounded-lg text-black-100 focus:outline-none"
+              type="text"
+              placeholder="Surname"
+              name="surname"
+              value={formData.surname}
+              onChange={handleChange}
+              required
+            />
+          </div>
         </div>
         <div className="flex flex-col w-full md:space-y-2 space-y-1">
           <label className="md:text-paragraph text-paragraph-sm">

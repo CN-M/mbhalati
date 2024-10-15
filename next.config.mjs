@@ -1,7 +1,24 @@
 import { withContentlayer } from "next-contentlayer";
 
 /** @type {import('next').NextConfig} */
-const nextConfig = { reactStrictMode: true, swcMinify: true };
+const nextConfig = {
+  reactStrictMode: true,
+  swcMinify: true,
+  async redirects() {
+    return [
+      {
+        source: "/about",
+        destination: "/",
+        permanent: true,
+      },
+      {
+        source: "/author/*",
+        destination: "/",
+        permanent: true,
+      },
+    ];
+  },
+};
 
 // export default nextConfig;
 // module.exports = withContentlayer(nextConfig);
