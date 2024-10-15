@@ -12,8 +12,8 @@ const nextConfig = {
         permanent: true,
       },
       {
-        source: "/author/*",
-        destination: "/",
+        source: "/post/:slug",
+        destination: "/:slug",
         permanent: true,
       },
     ];
