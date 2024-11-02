@@ -81,7 +81,7 @@ const PostLayout = ({ params }: { params: { slug: string } }) => {
           </Link>
         </div>
         <div
-          className="[&>*]:mb-3 [&>*:last-child]:mb-0 pb-8 prose md:prose-lg md:leading-paragraph"
+          className="[&>*]:mb-3 [&>*:last-child]:mb-0 pb-8 prose md:prose-lg md:leading-paragraph text-black-100"
           dangerouslySetInnerHTML={{ __html: post.body.html }}
         />
       </article>
