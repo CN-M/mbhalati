@@ -10,7 +10,8 @@ export const generateStaticParams = async () =>
 export const generateMetadata = async ({
   params,
 }: {
-  params: { slug: string };
+  // params: { slug: string };
+  params: any;
 }) => {
   const { slug } = await params;
 
@@ -46,6 +47,7 @@ export const generateMetadata = async ({
   };
 };
 
+// const PostLayout = async ({ params }: { params: { slug: string } }) => {
 const PostLayout = async ({ params }: { params: any }) => {
   const { slug } = await params;
 

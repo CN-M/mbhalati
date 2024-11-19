@@ -33,7 +33,8 @@ export async function generateMetadata({ params }: { params: any }) {
 export default async function CategoryPage({
   params,
 }: {
-  params: { category: string };
+  // params: { category: string };
+  params: any;
 }) {
   const { category } = await params;
   const cat = slugify(category, { lower: true });
