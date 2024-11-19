@@ -9,6 +9,7 @@ export const LetsGetJiggy = () => {
   return (
     <Link
       href="https://youtu.be/3JcmQONgXJM?si=e2uGjnzdI-0AbdcH"
+      className="hidden md:block"
       target="_blank"
     >
       <button className="lg:px-8 lg:py-4 md:px-8 md:py-4 px-4 py-2 md:space-x-2 space-x-1 flex items-center justify-center 2xl:space-x-3 xl:space-x-2 2xl:px-8 2xl:py-4 2xl:text-paragraph md:text-paragraph text-paragraph-xs leading-paragraph font-regular bg-secondary text-black-100 rounded-lg">

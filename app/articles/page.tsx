@@ -10,8 +10,6 @@ export async function generateMetadata() {
   };
 }
 
-export const dynamic = "force-dynamic";
-
 export default function Articles() {
   const posts = allPosts.sort((a, b) =>
     compareDesc(new Date(a.date), new Date(b.date))

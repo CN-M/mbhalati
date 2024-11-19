@@ -19,7 +19,7 @@ export const generateStaticParams = async () => {
 };
 
 export async function generateMetadata({ params }: { params: any }) {
-  const { category } = params;
+  const { category } = await params;
   const title = category
     .split("-")
     .map((word: string) => word.charAt(0).toUpperCase() + word.slice(1))
@@ -28,14 +28,12 @@ export async function generateMetadata({ params }: { params: any }) {
   return { title };
 }
 
-export const dynamic = "force-dynamic";
-
-export default function CategoryPage({
+export default async function CategoryPage({
   params,
 }: {
   params: { category: string };
 }) {
-  const { category } = params;
+  const { category } = await params;
   const cat = slugify(category, { lower: true });
 
   const posts = allPosts

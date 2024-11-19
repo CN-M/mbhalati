@@ -7,9 +7,15 @@ import slugify from "slugify";
 export const generateStaticParams = async () =>
   allPosts.map((post) => ({ slug: post._raw.flattenedPath }));
 
-export const generateMetadata = ({ params }: { params: { slug: string } }) => {
-  const post = allPosts.find((post) => post._raw.flattenedPath === params.slug);
-  if (!post) throw new Error(`Post not found for slug: ${params.slug}`);
+export const generateMetadata = async ({
+  params,
+}: {
+  params: { slug: string };
+}) => {
+  const { slug } = await params;
+
+  const post = allPosts.find((post) => post._raw.flattenedPath === slug);
+  if (!post) throw new Error(`Post not found for slug: ${slug}`);
 
   const generateExcerpt = (html: string, maxLength: number = 160) => {
     const plainText = html
@@ -40,10 +46,12 @@ export const generateMetadata = ({ params }: { params: { slug: string } }) => {
   };
 };
 
-const PostLayout = ({ params }: { params: { slug: string } }) => {
-  const post = allPosts.find((post) => post._raw.flattenedPath === params.slug);
+const PostLayout = async ({ params }: { params: { slug: string } }) => {
+  const { slug } = await params;
 
-  if (!post) throw new Error(`Post not found for slug: ${params.slug}`);
+  const post = allPosts.find((post) => post._raw.flattenedPath === slug);
+
+  if (!post) throw new Error(`Post not found for slug: ${slug}`);
 
   const { title, category, date } = post;
 
@@ -52,11 +60,11 @@ const PostLayout = ({ params }: { params: { slug: string } }) => {
   return (
     <div className="flex flex-col h-full w-full items-center justify-center">
       {post.coverImage && (
-        <div className="my-6 xl:w-4/5 w-full xl:h-[80vh] lg:h-[60vh] md:h-[50vh] sm:h-[40vh] h-[30vh] px-5 flex items-center justify-center">
+        <div className="my-6 xl:w-[60%] lg:w-[80%] w-full  xl:h-[60vh] lg:h-[50vh] md:h-[50vh] sm:h-[40vh] h-[30vh] px-5 flex items-center justify-center">
           <Image
             src={post.coverImage}
             alt={title}
-            className="rounded-xl w-full h-full object-cover"
+            className="rounded-xl w-full h-full object-cover "
             height={2000}
             width={2000}
           />
