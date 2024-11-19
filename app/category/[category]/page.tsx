@@ -15,7 +15,9 @@ export const generateStaticParams = async () => {
 
   const categoriesArr = Array.from(categories);
 
-  return categoriesArr;
+  return categoriesArr.map((category) => ({
+    category: slugify(category, { lower: true }), // Ensure slugified category
+  }));
 };
 
 export async function generateMetadata({ params }: { params: any }) {
