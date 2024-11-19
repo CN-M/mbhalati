@@ -46,7 +46,7 @@ export const generateMetadata = async ({
   };
 };
 
-const PostLayout = async ({ params }: { params: { slug: string } }) => {
+const PostLayout = async ({ params }: { params: any }) => {
   const { slug } = await params;
 
   const post = allPosts.find((post) => post._raw.flattenedPath === slug);
@@ -98,5 +98,3 @@ const PostLayout = async ({ params }: { params: { slug: string } }) => {
 };
 
 export default PostLayout;
-
-export const revalidate = 60;
