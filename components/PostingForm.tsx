@@ -3,8 +3,10 @@
 import { Button } from "@/components/ui/button";
 
 import { post } from "@/app/guestbook/actions";
+import { cn } from "@/lib/utils";
 import { Like } from "@prisma/client";
 import { useActionState, useEffect } from "react";
+import { useFormStatus } from "react-dom";
 
 type CleanPost = {
   id: string;
@@ -56,13 +58,26 @@ export const TextBox = ({
 
       {/* Buttons */}
       <div className="mt-4 flex justify-end gap-2">
-        <Button
-          type="submit"
-          className="h-10 px-4 py-2 bg-secondary/75 text-black-100/75 hover:bg-secondary"
-        >
-          Submit
-        </Button>
+        <SubmitBtn />
       </div>
     </form>
+  );
+};
+
+export const SubmitBtn = () => {
+  const { pending } = useFormStatus();
+  return (
+    <Button
+      type="submit"
+      disabled={pending}
+      className={cn(
+        "h-10 px-4 py-2  hover:bg-secondary",
+        pending
+          ? "bg-secondary/25 text-black-100/25"
+          : "bg-secondary/75 text-black-100/75"
+      )}
+    >
+      {pending ? "Submitting..." : "Submit"}
+    </Button>
   );
 };

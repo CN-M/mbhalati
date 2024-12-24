@@ -35,8 +35,6 @@
     "rehype-stringify": "^10.0.0",
     "remark": "^15.0.1",
     "remark-html": "^16.0.1",
-    "sha1": "link:@oslojs/crypto/sha1",
-    "sha2": "link:@oslojs/crypto/sha2",
     "slugify": "^1.6.6",
     "tailwind-hamburgers": "^1.3.5",
     "tailwind-merge": "^2.5.5",

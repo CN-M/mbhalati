@@ -80,12 +80,6 @@ importers:
       remark-html:
         specifier: ^16.0.1
         version: 16.0.1
-      sha1:
-        specifier: link:@oslojs/crypto/sha1
-        version: link:@oslojs/crypto/sha1
-      sha2:
-        specifier: link:@oslojs/crypto/sha2
-        version: link:@oslojs/crypto/sha2
       slugify:
         specifier: ^1.6.6
         version: 1.6.6
