@@ -73,10 +73,10 @@ export default async function Guestbook() {
             </Avatar>
           </span>
 
-          {/* Form for posting */}
-          <TextBox posts={posts} userId={user.id} />
-
-          <Logout />
+          <div className="flex flex-col w-full items-end gap-2">
+            <TextBox posts={posts} userId={user.id} />
+            <Logout />
+          </div>
         </div>
       ) : (
         <div className="w-full flex justify-end">
