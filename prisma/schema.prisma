@@ -1,0 +1,55 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum role {
+  ARCHITECT
+  CIVILIAN
+}
+
+model User {
+  id            String   @id @default(uuid())
+  sessions      Session[]
+  firstName     String
+  lastName      String
+  email         String   @unique
+  googleId      String
+  profilePicture String
+  posts         Post[]
+  likes         Like[]
+  role          role     @default(CIVILIAN)
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+}
+
+model Session {
+  id        String   @id
+  userId    String
+  expiresAt DateTime
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model Post {
+  id        String   @id @default(uuid())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id])
+  message   String
+  likes     Like[]   // Remove the onDelete attribute here
+  createdAt DateTime @default(now())
+}
+
+model Like {
+  id        String   @id @default(uuid())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id])
+  postId    String
+  post      Post     @relation(fields: [postId], references: [id], onDelete: Cascade)  // Keep onDelete here
+  createdAt DateTime @default(now())
+
+  @@unique([userId, postId]) // Prevents duplicate likes
+}

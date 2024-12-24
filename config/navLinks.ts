@@ -12,4 +12,8 @@ export const navLinks: navLink[] = [
     text: "Articles",
     href: "/articles",
   },
+  {
+    text: "Guestbook",
+    href: "/guestbook",
+  },
 ];

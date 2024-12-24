@@ -50,16 +50,16 @@ export const ContactForm = () => {
   };
 
   return (
-    <div className="h-full w-full 2xl:w-1/3 xl:w-1/2">
+    <div className="h-full w-full 3xl:w-1/3 2xl:w-[40%] xl:w-1/2">
       <form
         onSubmit={handleSubmit}
         className="flex flex-col h-full text-white text-paragraph leading-paragraph space-y-4"
       >
-        <div className="flex flex-col 3xl:flex-row max-3xl:space-y-4 3xl:space-x-4 w-full">
+        <div className="flex flex-col 2xl:flex-row max-2xl:space-y-4 2xl:space-x-4 w-full">
           <div className="flex flex-col w-full md:space-y-2 space-y-1">
             <label className="md:text-paragraph text-paragraph-sm">Name</label>
             <input
-              className="lg:p-4 py-2 px-3 md:text-paragraph text-paragraph-sm rounded-lg text-black-100 focus:outline-none"
+              className="py-2 px-3 md:text-paragraph text-paragraph-sm rounded-lg text-black-100/75 focus:outline-none"
               type="text"
               placeholder="Name"
               name="name"
@@ -73,7 +73,7 @@ export const ContactForm = () => {
               Surname
             </label>
             <input
-              className="lg:p-4 py-2 px-3 md:text-paragraph text-paragraph-sm rounded-lg text-black-100 focus:outline-none"
+              className="py-2 px-3 md:text-paragraph text-paragraph-sm rounded-lg text-black-100/75 focus:outline-none"
               type="text"
               placeholder="Surname"
               name="surname"
@@ -88,7 +88,7 @@ export const ContactForm = () => {
             Email Address
           </label>
           <input
-            className="lg:p-4 py-2 px-3 md:text-paragraph text-paragraph-sm rounded-lg text-black-100 focus:outline-none"
+            className="py-2 px-3 md:text-paragraph text-paragraph-sm rounded-lg text-black-100/75 focus:outline-none"
             type="email"
             placeholder="Email Address"
             name="email"
@@ -100,7 +100,7 @@ export const ContactForm = () => {
         <div className="flex flex-col w-full md:space-y-2 space-y-1">
           <label className="md:text-paragraph text-paragraph-sm">Message</label>
           <textarea
-            className="h-48 w-full lg:p-4 py-2 px-3 md:text-paragraph text-paragraph-sm rounded-lg text-black-100 focus:outline-none resize-none"
+            className="h-48 w-full lg:p-4 py-2 px-3 md:text-paragraph text-paragraph-sm rounded-lg text-black-100/75 focus:outline-none resize-none"
             placeholder="We've been trying to reach you about your car's extended warranty."
             name="message"
             value={formData.message}
