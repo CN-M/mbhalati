@@ -18,7 +18,7 @@ type CleanPost = {
     profilePicture: string;
     firstName: string;
     lastName: string;
-    id: string; // Added user ID for comparison
+    id: string;
   };
 };
 
@@ -43,26 +43,21 @@ export function Posts({
 
   const { toast } = useToast();
 
-  // Like Action useEffect for showing toast notifications
   useEffect(() => {
     if (likeResponse === "Success") {
       toast({
         title: likeMessage,
-        // description: likeMessage,
         variant: "success",
       });
     } else if (likeResponse === "Error") {
       toast({
-        // title: "Error Liking Post",
         title: likeMessage,
-        // description: likeMessage,
         variant: "destructive",
         className: "bg-red-700",
       });
     }
   }, [likeResponse, likeMessage, toast]);
 
-  // Delete Action useEffect for showing toast notifications
   useEffect(() => {
     if (deleteResponse === "Success") {
       toast({

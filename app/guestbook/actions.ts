@@ -186,7 +186,7 @@ export const likePost = async (
       revalidatePath("/guestbook");
 
       return {
-        message: "Post unliked successfully",
+        message: "Post unliked",
         response: "Success",
       };
     }
@@ -202,7 +202,7 @@ export const likePost = async (
     revalidatePath("/guestbook");
 
     return {
-      message: "Post liked successfully",
+      message: "Post liked",
       response: "Success",
     };
   } catch (err: any) {
@@ -274,7 +274,7 @@ export const deletePost = async (
     revalidatePath("/guestbook");
 
     return {
-      message: "Post deleted successfully",
+      message: "Post deleted",
       response: "Success",
     };
   } catch (err: any) {
