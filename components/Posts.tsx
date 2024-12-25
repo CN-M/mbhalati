@@ -61,14 +61,12 @@ export function Posts({
   useEffect(() => {
     if (deleteResponse === "Success") {
       toast({
-        title: "Post Deleted",
-        description: deleteMessage,
+        title: deleteMessage,
         variant: "success",
       });
     } else if (deleteResponse === "Error") {
       toast({
-        title: "Error Deleting Post",
-        description: deleteMessage,
+        title: deleteMessage,
         variant: "destructive",
         className: "bg-red-700",
       });
