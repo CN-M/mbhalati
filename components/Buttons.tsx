@@ -13,9 +13,7 @@ export const LetsGetJiggy = () => {
       className="hidden md:block"
       target="_blank"
     >
-      <button className="lg:px-[28px] lg:py-[14px] md:px-[26px] md:py-[13px] px-4 py-2 flex items-center space-x-1 justify-center md:text-paragraph text-paragraph-sm leading-heading font-regular bg-secondary text-black-100 rounded-lg">
-        {/* <button className="lg:px-8 lg:py-4 md:px-8 md:py-4 px-4 py-2 md:space-x-2 space-x-1 flex items-center justify-center 2xl:space-x-3 xl:space-x-2 2xl:px-8 2xl:py-4 2xl:text-paragraph md:text-paragraph text-paragraph-xs leading-paragraph font-regular bg-secondary text-black-100 rounded-lg"> */}
-
+      <button className="lg:px-[28px] lg:py-[14px] md:px-[26px] md:py-[13px] px-4 py-2 flex items-center space-x-1 justify-center md:text-paragraph text-paragraph-sm leading-heading font-regular bg-secondary hover:scale-105 transition-transform duration-200 ease-in-out text-black-100 rounded-lg">
         <p>Let&apos;s Get Jiggy</p>
         <span role="img">🕺</span>
       </button>
@@ -26,7 +24,7 @@ export const LetsGetJiggy = () => {
 export const GetToKnowMe = () => {
   return (
     <Link href="#about">
-      <button className="lg:px-[28px] lg:py-[14px] md:px-[26px] md:py-[13px] px-4 py-2 flex items-center justify-center md:text-paragraph space-x-1 text-paragraph-sm leading-heading font-regular bg-white text-black-100 rounded-lg">
+      <button className="lg:px-[28px] lg:py-[14px] md:px-[26px] md:py-[13px] px-4 py-2 flex items-center justify-center md:text-paragraph space-x-1 text-paragraph-sm leading-heading font-regular bg-white hover:scale-105 transition-transform duration-200 ease-in-out text-black-100 rounded-lg">
         <span>Get to Know Me</span>
         <Image
           src={arrowDown}
@@ -44,7 +42,7 @@ export const WinTheLottery = () => {
       href="https://youtu.be/dQw4w9WgXcQ?si=rrpJS7Dx3KyKoG1-"
       target="_blank"
     >
-      <button className="lg:px-[28px] lg:py-[14px] md:px-[26px] md:py-[13px] px-4 py-2 flex items-center justify-center md:text-paragraph space-x-1 text-paragraph-sm leading-heading font-regular bg-tertiary text-black-100 rounded-lg">
+      <button className="lg:px-[28px] lg:py-[14px] md:px-[26px] md:py-[13px] px-4 py-2 flex items-center justify-center md:text-paragraph space-x-1 text-paragraph-sm leading-heading font-regular bg-tertiary hover:scale-105 transition-transform duration-200 ease-in-out text-black-100 rounded-lg">
         <span>Win the Lottery</span>
         <Image
           src={moneyHand}
@@ -86,7 +84,7 @@ export const Emojis = () => {
 export const LoginWithGoogle = () => {
   return (
     <Link href="/login/google">
-      <button className="flex items-center justify-center w-[15rem] md:space-x-4 space-x-2 lg:px-[28px] lg:py-[14px] md:px-[26px] md:py-[13px] px-4 py-2 md:text-paragraph text-paragraph-sm leading-heading bg-black-100 text-white rounded-lg">
+      <button className="flex items-center justify-center w-[15rem] md:space-x-4 space-x-2 lg:px-[28px] lg:py-[14px] md:px-[26px] md:py-[13px] px-4 py-2 md:text-paragraph text-paragraph-sm leading-heading bg-black-100 hover:scale-105 transition-transform duration-200 ease-in-out text-white rounded-lg">
         <Image
           src={Google}
           alt="Google Logo"
