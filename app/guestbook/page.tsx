@@ -42,7 +42,7 @@ export default async function Guestbook() {
     <div className="relative mx-auto xl:w-[40%] w-11/12 py-8 space-y-6">
       <h1 className="text-3xl font-light tracking-tight">Guestbook</h1>
       <Card className="relative border shadow-md">
-        <CardHeader className="flex flex-row items-center gap-2 bg-muted/20 dark:bg-muted/50 rounded-t-lg py-4 px-6">
+        <CardHeader className="flex flex-row items-center gap-2 bg-muted/20 rounded-t-lg py-4 px-6">
           <Pin className="h-5 w-5 rotate-45 text-accent" />
           <span className="text-sm font-medium text-muted-foreground">
             Pinned
