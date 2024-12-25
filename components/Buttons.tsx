@@ -58,7 +58,7 @@ export const SendMessage = ({ isSubmitting }: { isSubmitting: boolean }) => {
   return (
     <button
       type="submit"
-      className="lg:px-[28px] lg:py-[14px] md:px-[26px] md:py-[13px] px-4 py-2 flex items-center justify-center md:text-paragraph space-x-1 text-paragraph-sm leading-paragraph font-regular text-white bg-tertiary rounded-lg"
+      className="lg:px-[28px] lg:py-[14px] md:px-[26px] md:py-[13px] px-4 py-2 flex items-center justify-center md:text-paragraph space-x-1 text-paragraph-sm leading-paragraph font-regular text-white bg-tertiary rounded-lg hover:scale-105 transition-transform duration-200 ease-in-out"
       disabled={isSubmitting}
     >
       {isSubmitting ? (
