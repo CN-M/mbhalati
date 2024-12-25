@@ -47,12 +47,12 @@ export default async function CategoryPage({
     <div className="mx-auto xl:w-4/5 w-11/12 py-8 space-y-8">
       <div className=" grid grid-cols-1 md:grid-cols-2 items-start justify-center gap-5 w-full">
         {posts.slice(0, 2).map((post, idx) => (
-          <PostCard key={idx} {...post} />
+          <PostCard key={idx} featured={false} post={post} />
         ))}
       </div>
       <div className="grid lg:grid-cols-3 grid-cols-1 md:grid-cols-2 md:gap-6 gap-5 justify-center items-start">
         {posts.slice(2).map((post, idx) => (
-          <PostCard key={idx} {...post} />
+          <PostCard key={idx} featured={false} post={post} />
         ))}
       </div>
     </div>
