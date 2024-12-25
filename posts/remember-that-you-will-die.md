@@ -3,6 +3,7 @@ title: "Remember That You Will Die"
 date: "7 Nov, 2022"
 category: "Philosophical Musings"
 coverImage: "/img/blog/skull.jpg"
+featured: true
 ---
 
 **‘Memento Mori’** is a Latin phrase common in Stoic literature that translates, quite gruesomely, to **‘Remember that you will die.’**

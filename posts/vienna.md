@@ -3,6 +3,8 @@ title: "Vienna"
 date: "5 Dec, 2022"
 category: "Philosophical Musings"
 coverImage: "/img/blog/skyline.jpg"
+featured: true
+excerpt: "About a year ago I wrote the first issue of The Narrative newsletter. I wrote about birthdays, and mine in particular. I spoke about how beautiful it is to be reminded that I am loved, how awkward it can be to receive attention, how stupid it is that we don't love each other out loud on any other day, and how necessary it is to let people love you. I also spoke about a song by Billy Joel called Vienna. I promised to talk about it again at a later stage and here the later stage has come. This won't be the last I speak of this wonderful song but I want us to start here."
 ---
 
 About a year ago I wrote the first issue of [The Narrative](https://www.getrevue.co/profile/Emberfiction) newsletter. I wrote about [birthdays, and mine in particular](https://www.getrevue.co/profile/Emberfiction/issues/the-narrative-1-on-birthdays-305195). I spoke about how beautiful it is to be reminded that I am loved, how awkward it can be to receive attention, how stupid it is that we don't love each other out loud on any other day, and how necessary it is to let people love you. I also spoke about a song by Billy Joel called Vienna. I promised to talk about it again at a later stage and here the later stage has come. This won't be the last I speak of this wonderful song but I want us to start here.

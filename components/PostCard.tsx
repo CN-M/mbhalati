@@ -4,7 +4,13 @@ import Image from "next/image";
 import Link from "next/link";
 import slugify from "slugify";
 
-export const PostCard = (post: Post) => {
+export const PostCard = ({
+  post,
+  featured,
+}: {
+  post: Post;
+  featured: boolean;
+}) => {
   const { title, coverImage, category } = post;
 
   const postUrl = slugify(title, { lower: true }).replaceAll(":", "-");
@@ -49,6 +55,13 @@ export const PostCard = (post: Post) => {
           {format(parseISO(post.date), "LLLL d, yyyy")}
         </time>
       </div>
+      {featured ? (
+        <p className="mt-1 text-sm text-black-100/75 line-clamp-3">
+          {post.excerpt}
+        </p>
+      ) : (
+        <></>
+      )}
     </div>
   );
 };

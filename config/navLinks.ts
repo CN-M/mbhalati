@@ -9,8 +9,8 @@ export const navLinks: navLink[] = [
     href: "/",
   },
   {
-    text: "Articles",
-    href: "/articles",
+    text: "Blog",
+    href: "/blog",
   },
   {
     text: "Guestbook",

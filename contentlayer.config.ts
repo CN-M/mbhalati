@@ -7,6 +7,8 @@ export const Post = defineDocumentType(() => ({
   filePathPattern: `**/*.md`,
   fields: {
     title: { type: "string", required: true },
+    featured: { type: "boolean", required: false },
+    excerpt: { type: "string", required: false },
     category: {
       type: "enum",
       options: [
@@ -18,7 +20,7 @@ export const Post = defineDocumentType(() => ({
       required: true,
     },
     date: { type: "date", required: true },
-    coverImage: { type: "string", required: false }, // Add coverImage field
+    coverImage: { type: "string", required: true },
   },
   computedFields: {
     url: {

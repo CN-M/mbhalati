@@ -11,7 +11,7 @@ export const AboutMe = () => {
   return (
     <section
       id="about"
-      className="flex flex-col lg:flex-row h-full w-full justify-center items-center bg-white 2xl:px-32 xl:px-16 lg:px-8 lg:py-16 md:px-24 px-6 py-8 xl:space-x-16 lg:space-x-8 md:space-y-8 space-y-4"
+      className="border-b border-primary/25 flex flex-col lg:flex-row h-full w-full justify-center items-center bg-white 2xl:px-32 xl:px-16 lg:px-8 lg:py-16 md:px-24 px-6 py-8 xl:space-x-16 lg:space-x-8 md:space-y-8 space-y-4"
     >
       {/* <div className="text-black-100 space-y-2 text-left 2xl:w-1/3 lg:w-1/2 w-full"> */}
       <div className="text-black-100 space-y-2 text-left 3xl:w-[35%] lg:w-1/2 w-full">
@@ -31,7 +31,7 @@ export const AboutMe = () => {
           </p>
           <p>
             I have a{" "}
-            <Link href="/articles">
+            <Link href="/blog">
               <strong className="text-emerald-500">blog</strong>
             </Link>{" "}
             I haven&apos;t updated in a while.

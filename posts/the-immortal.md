@@ -3,6 +3,8 @@ title: "The Immortal"
 date: " 17 Oct, 2022"
 category: "Short Story"
 coverImage: "/img/blog/candle.jpg"
+featured: true
+excerpt: "“Okay. I think we’re all set. Jimmy? Are you recording?”“Yes, Professor Vogel!”“Are you sure? Because you said that last time and you weren’t recording.”“Yes, Professor, I’m sure this time. I’m really really sorry for earlier.”“You owe me no apology. It’s our friend over here that deserves your sorry.”Professor Vogel takes a deep sigh, probably thinking about how he’s too old to b"
 ---
 
 “Okay. I think we’re all set. Jimmy? Are you recording?”

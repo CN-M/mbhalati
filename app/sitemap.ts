@@ -45,7 +45,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 1,
     },
     {
-      url: "https://cn.mbhalati.com/articles",
+      url: "https://cn.mbhalati.com/blog",
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.8,
