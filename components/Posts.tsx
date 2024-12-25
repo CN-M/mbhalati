@@ -87,7 +87,7 @@ export function Posts({
             className="rounded-lg border p-4 shadow-sm hover:shadow-md transition-shadow"
             id={`message-${post.id}`}
           >
-            <div className="mb-2 md:mb-3 flex gap-3">
+            <div className="mb-1 md:mb-3 flex gap-3">
               <span className="relative flex size-10 shrink-0 overflow-hidden rounded-full">
                 <img
                   className="aspect-square size-10 rounded-full"
@@ -105,9 +105,9 @@ export function Posts({
               </div>
             </div>
 
-            <div className="break-words pl-[52px]">{post.message}</div>
+            <div className="break-words pl-[60px]">{post.message}</div>
 
-            <div className="md:mt-2 mt-0 pl-[52px] flex justify-between items-center gap-4">
+            <div className="md:mt-2 -mt-1 lg:pl-[60px] pl-[48px] flex justify-between items-center gap-4">
               <form action={likeAction}>
                 <input type="hidden" name="postId" value={post.id} />
                 <Button
