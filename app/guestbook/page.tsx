@@ -4,7 +4,6 @@ import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { LoginWithGoogle } from "@/components/Buttons";
 import { getCurrentSession } from "@/lib/server/session";
 
-import { Logout } from "@/components/LogoutBtn";
 import { Posts } from "@/components/Posts";
 
 import { TextBox } from "@/components/PostingForm";
@@ -73,10 +72,7 @@ export default async function Guestbook() {
             </Avatar>
           </span>
 
-          <div className="flex flex-col w-full items-end gap-2">
-            <TextBox posts={posts} userId={user.id} />
-            <Logout />
-          </div>
+          <TextBox posts={posts} userId={user.id} />
         </div>
       ) : (
         <div className="w-full flex md:justify-end justify-center">

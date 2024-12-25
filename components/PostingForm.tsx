@@ -8,6 +8,8 @@ import { Like } from "@prisma/client";
 import { useActionState, useEffect } from "react";
 import { useFormStatus } from "react-dom";
 
+import { Logout } from "./LogoutBtn";
+
 type CleanPost = {
   id: string;
   createdAt: Date;
@@ -53,11 +55,12 @@ export const TextBox = ({
           aria-describedby="message-form-item-description"
           aria-invalid="false"
           style={{ height: "30px" }}
-        ></textarea>
+        />
       </div>
 
       {/* Buttons */}
-      <div className="mt-4 flex justify-end gap-2">
+      <div className="md:mt-4 mt-2 flex justify-end gap-2">
+        <Logout />
         <SubmitBtn />
       </div>
     </form>
@@ -71,10 +74,8 @@ export const SubmitBtn = () => {
       type="submit"
       disabled={pending}
       className={cn(
-        "h-10 px-4 py-2  hover:bg-secondary",
-        pending
-          ? "bg-secondary/25 text-black-100/25"
-          : "bg-secondary/75 text-black-100/75"
+        "h-10 px-4 py-2 text-white  hover:bg-primary/75",
+        pending ? "bg-primary/65" : ""
       )}
     >
       {pending ? "Submitting..." : "Submit"}

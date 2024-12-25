@@ -97,9 +97,9 @@ export function Posts({
                   src={post.user.profilePicture}
                 />
               </span>
-              <div className="flex flex-col justify-center gap-px text-sm">
-                <div>{`${post.user.firstName} ${post.user.lastName}`}</div>
-                <div className="text-muted-foreground text-xs">
+              <div className="flex flex-col justify-center gap-px text-sm ">
+                <div className="text-emerald-500">{`${post.user.firstName} ${post.user.lastName}`}</div>
+                <div className="text-xs text-black-75">
                   {formatDate(post.createdAt)}
                 </div>
               </div>
@@ -118,12 +118,12 @@ export function Posts({
                 >
                   <Heart
                     className={`h-5 w-5 transition ${
-                      isLiked
-                        ? "fill-red-500 text-red-500"
-                        : "text-muted-foreground"
+                      isLiked ? "fill-red-500 text-red-500" : "text-emerald-500"
                     }`}
                   />
-                  <span className={`${isLiked ? "text-red-500" : ""}`}>
+                  <span
+                    className={`${isLiked ? "text-red-500" : "text-emerald-500"}`}
+                  >
                     {post.likes.length}
                   </span>
                 </Button>

@@ -296,6 +296,7 @@ export const logout = async () => {
       response: "Error",
     };
   }
+
   await invalidateSession(session.id);
   await deleteSessionTokenCookie();
 
