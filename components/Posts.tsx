@@ -96,7 +96,7 @@ export function Posts({
                 />
               </span>
               <div className="flex flex-col justify-center gap-px text-sm ">
-                <div className="text-emerald-500">{`${post.user.firstName} ${post.user.lastName}`}</div>
+                <div className="text-emerald-600">{`${post.user.firstName} ${post.user.lastName}`}</div>
                 <div className="text-xs text-black-75">
                   {formatDate(post.createdAt)}
                 </div>
