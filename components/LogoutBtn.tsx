@@ -12,9 +12,9 @@ export const Logout = () => {
   return (
     <Button
       type="submit"
-      variant="outline"
+      variant="default"
       onClick={handleClick}
-      className="h-10 px-4 py-2 border-black-100/25 text-black-100/65 hover:bg-black-100/10"
+      className="h-10 px-4 py-2 bg-black-100 text-white hover:bg-black-100/75"
     >
       Logout
     </Button>

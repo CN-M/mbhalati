@@ -87,7 +87,7 @@ export function Posts({
             className="rounded-lg border p-4 shadow-sm hover:shadow-md transition-shadow"
             id={`message-${post.id}`}
           >
-            <div className="mb-1 md:mb-3 flex gap-3">
+            <div className="mb-1 md:mb-1 flex gap-3">
               <span className="relative flex size-10 shrink-0 overflow-hidden rounded-full">
                 <img
                   className="aspect-square size-10 rounded-full"
@@ -107,7 +107,7 @@ export function Posts({
 
             <div className="break-words pl-[60px]">{post.message}</div>
 
-            <div className="md:mt-2 -mt-1 lg:pl-[60px] pl-[48px] flex justify-between items-center gap-4">
+            <div className="sm:mt-0 -mt-1 pl-[48px] flex justify-between items-center gap-4">
               <form action={likeAction}>
                 <input type="hidden" name="postId" value={post.id} />
                 <Button
@@ -118,11 +118,13 @@ export function Posts({
                 >
                   <Heart
                     className={`h-5 w-5 transition ${
-                      isLiked ? "fill-red-500 text-red-500" : "text-emerald-500"
+                      isLiked
+                        ? "text-emerald-500 fill-emerald-500"
+                        : "fill-red-500 text-red-500"
                     }`}
                   />
                   <span
-                    className={`${isLiked ? "text-red-500" : "text-emerald-500"}`}
+                    className={`${isLiked ? "text-emerald-500 fill-emerald-500" : "text-red-500"}`}
                   >
                     {post.likes.length}
                   </span>
