@@ -84,10 +84,10 @@ export function Posts({
         return (
           <Card
             key={post.id}
-            className="rounded-lg border p-4 shadow-sm hover:shadow-md transition-shadow dark:bg-zinc-900/30"
+            className="rounded-lg border p-4 shadow-sm hover:shadow-md transition-shadow"
             id={`message-${post.id}`}
           >
-            <div className="mb-3 flex gap-3">
+            <div className="mb-2 md:mb-3 flex gap-3">
               <span className="relative flex size-10 shrink-0 overflow-hidden rounded-full">
                 <img
                   className="aspect-square size-10 rounded-full"
@@ -107,7 +107,7 @@ export function Posts({
 
             <div className="break-words pl-[52px]">{post.message}</div>
 
-            <div className="mt-2 pl-[52px] flex justify-between items-center gap-4">
+            <div className="md:mt-2 mt-0 pl-[52px] flex justify-between items-center gap-4">
               <form action={likeAction}>
                 <input type="hidden" name="postId" value={post.id} />
                 <Button

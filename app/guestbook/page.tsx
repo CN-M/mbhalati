@@ -39,7 +39,7 @@ export default async function Guestbook() {
   const { user, session } = await getCurrentSession();
 
   return (
-    <div className="relative mx-auto xl:w-[40%] w-11/12 py-8 space-y-6">
+    <div className="relative mx-auto xl:w-[40%] w-11/12 md:py-8 py-4 md:space-y-6 space-y-4">
       <h1 className="text-3xl font-light tracking-tight">Guestbook</h1>
       <Card className="relative border shadow-md">
         <CardHeader className="flex flex-row items-center gap-2 bg-muted/20 rounded-t-lg py-4 px-6">
@@ -49,7 +49,7 @@ export default async function Guestbook() {
           </span>
         </CardHeader>
         <CardContent className="px-6">
-          <p className="text-muted-foreground leading-paragraph">
+          <p className="text-muted-foreground leading-paragraph md:text-paragraph text-paragraph-sm">
             {pinnedMessage}
           </p>
         </CardContent>
@@ -79,7 +79,7 @@ export default async function Guestbook() {
           </div>
         </div>
       ) : (
-        <div className="w-full flex justify-end">
+        <div className="w-full flex md:justify-end justify-center">
           <LoginWithGoogle />
         </div>
       )}
