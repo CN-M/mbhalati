@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export const PodcastLogo = () => {
   return (
-    <Link href="/podcast">
+    <Link href="/">
       <div className="flex items-center space-x-2">
         <h1 className="xl:hidden text-emerald-500 md:text-heading-4 text-heading-5">
           MxM
