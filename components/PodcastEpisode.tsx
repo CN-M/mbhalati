@@ -111,7 +111,9 @@ export const PodcastEpisodes = async () => {
                   </Link>
                   <Button
                     variant="outline"
+                    // className="w-full sm:w-auto border-emerald-500 border-2 text-black-100 bg-white hover:border-tertiary transition-transform duration-1000 ease-in-out"
                     className="w-full sm:w-auto border-emerald-500 border-2 text-black-100 bg-white hover:border-tertiary transition-transform duration-1000 ease-in-out"
+                    disabled={true}
                   >
                     Episode Script
                   </Button>
