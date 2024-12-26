@@ -6,6 +6,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { PostCard } from "@/components/PostCard";
+import { ArrowRight } from "lucide-react";
 
 export function getBlogExcerpt(raw: string, charLimit: number = 3000): string {
   const cleanText = raw
@@ -76,7 +77,7 @@ const PostListItem = ({
             {format(parseISO(date), "LLLL d, yyyy")}
           </time>
         </div>
-        <p className="text-sm text-black-100/75 line-clamp-3">{excerpt}</p>
+        <p className="text-sm text-black-100/90 line-clamp-3">{excerpt}</p>
       </div>
     </div>
   );
@@ -96,7 +97,7 @@ export default function HomePageLatest() {
     .filter((post) => post.url !== "/posts/remember-that-you-will-die");
 
   return (
-    <div className="mx-auto 2xl:w-4/5 xl:w-[90%] w-11/12 py-8 flex flex-col items-start gap-4 max-md:-mt-4">
+    <div className="mx-auto 2xl:w-4/5 xl:w-[90%] w-11/12 3xl:py-24 sm:py-16 py-8 flex flex-col items-start gap-4 md:-mt-8 -mt-4">
       <h2 className="md:text-heading-3 text-heading-4 max-md:self-center text-black-100/90 font-thin">
         My Best Writing
       </h2>
@@ -108,6 +109,14 @@ export default function HomePageLatest() {
           {featuredPostsList.map((post, idx) => (
             <PostCard key={idx} featured={true} post={post} />
           ))}
+          <div className="w-full flex justify-center">
+            <Link href="/blog">
+              <span className="-mt-2 flex items-center justify-center md:text-paragraph-sm text-paragraph-xs font-medium bg-emerald-500 text-white px-3 py-1 rounded-md space-x-1 hover:scale-105 transition-transform duration-200 ease-in-out">
+                <span>All Blog Posts</span>
+                <ArrowRight className="h-5 w-5 transition text-white" />
+              </span>
+            </Link>
+          </div>
         </div>
         <div className="max-md:hidden flex flex-col space-y-2">
           <div className="space-y-4">
@@ -122,6 +131,14 @@ export default function HomePageLatest() {
                 excerpt={getBlogExcerpt(post.excerpt ?? "")}
               />
             ))}
+          </div>
+          <div className="w-full flex justify-center">
+            <Link href="/blog">
+              <span className="flex md:text-paragraph-sm text-paragraph-xs font-medium bg-emerald-500 text-white px-3 py-1 rounded-md space-x-1 hover:scale-105 transition-transform duration-200 ease-in-out">
+                <span>All Blog Posts</span>
+                <ArrowRight className={`h-5 w-5 transition ${"text-white "}`} />
+              </span>
+            </Link>
           </div>
         </div>
       </div>

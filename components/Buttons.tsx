@@ -21,6 +21,20 @@ export const LetsGetJiggy = () => {
   );
 };
 
+export const CheckOutPodcast = () => {
+  return (
+    <Link
+      href="https://open.spotify.com/show/2tsu1q7KYNAbPIhCFSgxYL?si=4dd968d522d94e5b"
+      className="hidden md:block"
+      target="_blank"
+    >
+      <button className="lg:px-[28px] lg:py-[14px] md:px-[26px] md:py-[13px] px-4 py-2 flex items-center space-x-1 justify-center md:text-paragraph text-paragraph-sm leading-heading font-regular bg-emerald-500 hover:scale-105 transition-transform duration-200 ease-in-out text-white rounded-lg">
+        Subscribe
+      </button>
+    </Link>
+  );
+};
+
 export const GetToKnowMe = () => {
   return (
     <Link href="#about">

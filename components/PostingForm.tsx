@@ -2,7 +2,7 @@
 
 import { Button } from "@/components/ui/button";
 
-import { post } from "@/app/guestbook/actions";
+import { post } from "@/app/(main)/guestbook/actions";
 import { cn } from "@/lib/utils";
 import { Like } from "@prisma/client";
 import { useActionState, useEffect } from "react";

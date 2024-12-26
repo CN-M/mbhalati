@@ -56,7 +56,7 @@ export const PostCard = ({
         </time>
       </div>
       {featured ? (
-        <p className="mt-1 text-sm text-black-100/75 line-clamp-3">
+        <p className="mt-1 text-sm text-black-100/90 line-clamp-3">
           {post.excerpt}
         </p>
       ) : (

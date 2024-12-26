@@ -1,6 +1,6 @@
 "use client";
 
-import { logout } from "@/app/guestbook/actions";
+import { logout } from "@/app/(main)/guestbook/actions";
 import { Button } from "@/components/ui/button";
 
 export const Logout = () => {

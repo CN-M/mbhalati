@@ -32,14 +32,18 @@ export const AboutMe = () => {
           <p>
             I have a{" "}
             <Link href="/blog">
-              <strong className="text-emerald-500">blog</strong>
+              <strong className="text-emerald-500 hover:text-emerald-400">
+                blog
+              </strong>
             </Link>{" "}
             I haven&apos;t updated in a while.
           </p>
           <p>
             I have a{" "}
-            <Link href={spotifyLink} target="_blank">
-              <strong className="text-emerald-500">podcast</strong>
+            <Link href="/podcast" target="_blank">
+              <strong className="text-emerald-500 hover:text-emerald-400">
+                podcast
+              </strong>
             </Link>
             , too. It kind of sucks, but it&apos;ll get better.
           </p>

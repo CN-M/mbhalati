@@ -13,6 +13,10 @@ export const navLinks: navLink[] = [
     href: "/blog",
   },
   {
+    text: "Podcast",
+    href: "/podcast",
+  },
+  {
     text: "Guestbook",
     href: "/guestbook",
   },

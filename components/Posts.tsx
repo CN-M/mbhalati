@@ -1,6 +1,6 @@
 "use client";
 
-import { deletePost, likePost } from "@/app/guestbook/actions";
+import { deletePost, likePost } from "@/app/(main)/guestbook/actions";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { useToast } from "@/hooks/use-toast";

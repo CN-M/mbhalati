@@ -1,5 +1,8 @@
+import { Footer } from "@/components/Footer";
+import { PodcastHeader } from "@/components/PodcastHeader";
+import { Toaster } from "@/components/ui/toaster";
 import { Montserrat, Poppins } from "next/font/google";
-import "./globals.css";
+// import "./globals.css";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -86,10 +89,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${montserrat.className} bg-white antialiased`}>
-        {children}
-      </body>
-    </html>
+    <>
+      <PodcastHeader />
+      {children}
+      <Footer />
+      <Toaster />
+    </>
   );
 }

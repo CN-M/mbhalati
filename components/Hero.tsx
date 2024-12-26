@@ -6,7 +6,7 @@ import { GetToKnowMe, WinTheLottery } from "./Buttons";
 
 import { socialLinks } from "@/config/socialLinks";
 
-export const Hero = () => {
+export const Hero = async () => {
   return (
     <section className="flex flex-col xl:flex-row lg:space-y-10 2xl:space-x-8 max-xl:space-y-8 max-sm:space-y-4 items-center justify-center h-full md:h-screen w-full 2xl:px-32 lg:px-4 px-2 py-16 bg-primary">
       <div className="text-white md:space-y-2 space-y-1 text-center 2xl:w-4/5 md:w-full md:px-4">
