@@ -6,8 +6,8 @@ type socialLink = {
 };
 
 import xTwitter from "@/public/icons/brands-footer/Frame-1.svg";
-import dribbble from "@/public/icons/brands-footer/Frame-2.svg";
-import linkedIn from "@/public/icons/brands-footer/Frame-3.svg";
+import linkedIn from "@/public/icons/brands-footer/Frame-2.svg";
+import dribbble from "@/public/icons/brands-footer/Frame-3.svg";
 import instagram from "@/public/icons/brands-footer/Frame-4.svg";
 import github from "@/public/icons/brands-footer/Frame.svg";
 import spotify from "@/public/icons/brands-footer/Vector.svg";

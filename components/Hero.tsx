@@ -47,7 +47,7 @@ export const Hero = async () => {
           </p>
         </div>
 
-        <div className="flex items-center justify-center md:flex-row 2xl:space-x-14 xl:space-x-8 md:space-x-14 space-x-6 text-black-50">
+        <div className="flex items-center justify-center md:flex-row 3xl:space-x-14 2xl:space-x-10 xl:space-x-12 md:space-x-14 space-x-6 text-black-50">
           {socialLinks.map(({ name, lightIcon, href }, idx) => (
             <Link key={idx} href={href} target="_blank">
               <Image
