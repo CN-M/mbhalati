@@ -20,4 +20,8 @@ export const navLinks: navLink[] = [
     text: "Guestbook",
     href: "/guestbook",
   },
+  {
+    text: "Portfolio",
+    href: "https://portfolio.mbhalati.com/",
+  },
 ];
