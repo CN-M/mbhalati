@@ -9,7 +9,7 @@ async function generatePostMetadata() {
   );
 
   return sortedPosts.map(({ title, date }) => ({
-    url: `https://cn.mbhalati.com/${slugify(title, { lower: true }).replaceAll(":", "-")}`,
+    url: `https://cn.mbhalati.com/${slugify(title, { lower: true }).replaceAll(":", "-").replaceAll("'", "")}`,
     lastModified: date,
     changeFrequency: "never" as const,
     priority: 0.7,

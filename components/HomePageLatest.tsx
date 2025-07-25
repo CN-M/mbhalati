@@ -126,7 +126,7 @@ export default function HomePageLatest() {
                 title={post.title}
                 category={post.category}
                 date={post.date}
-                url={`/${post.title.toLowerCase().replace(/\s+/g, "-").replace(/:/g, "-")}`}
+                url={`/${post.title.toLowerCase().replace(/\s+/g, "-").replace(/:/g, "-").replace("'", "")}`}
                 coverImage={post.coverImage}
                 excerpt={getBlogExcerpt(post.excerpt ?? "")}
               />

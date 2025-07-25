@@ -7,7 +7,9 @@ import slugify from "slugify";
 export const FeaturedPostCard = (post: Post) => {
   const { title, coverImage, category } = post;
 
-  const postUrl = slugify(title, { lower: true }).replaceAll(":", "-");
+  const postUrl = slugify(title, { lower: true })
+    .replaceAll(":", "-")
+    .replaceAll("'", "");
   const cat = slugify(category, { lower: true });
 
   return (
