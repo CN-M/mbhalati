@@ -33,7 +33,7 @@ export const generateMetadata = async ({
   const excerpt = generateExcerpt(post.body.html);
 
   return {
-    title: `${post.title} | C.N. Mbhalati`,
+    title: `${post.title}`,
     description: excerpt,
     openGraph: {
       images: [
