@@ -1,6 +1,6 @@
 ---
 title: "I Don't Trust LinkedIn"
-date: "26 Jul, 2025"
+date: "29 Jul, 2025"
 category: "Philosophical Musings"
 coverImage: "/img/blog/linkedin.jpg"
 featured: true
