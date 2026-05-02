@@ -33,3 +33,28 @@ export const clientPHcaptureException = ({
 		err instanceof Error ? err : new Error(errorMessage),
 	);
 };
+
+type PHIdentify = {
+	distinctId: string;
+	email?: string;
+	firstName?: string;
+	lastName?: string;
+	properties?: Properties;
+};
+
+export const clientPHIdentify = ({
+	distinctId,
+	email,
+	firstName,
+	lastName,
+	properties,
+}: PHIdentify) => {
+	posthog.identify(distinctId, {
+		email,
+		name:
+			firstName || lastName
+				? `${firstName ?? ""} ${lastName ?? ""}`.trim()
+				: undefined,
+		...properties,
+	});
+};

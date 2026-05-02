@@ -7,47 +7,9 @@ import {
 } from "@/lib/server/session";
 import { revalidatePath } from "next/cache";
 import { z } from "zod";
-
 import { prisma } from "@/lib/server/db";
-import { getPostHogClient } from "@/lib/posthog-serve";
+import { serverPHCapture } from "@/lib/posthog-server";
 
-const posts = [
-  {
-    id: "1",
-    user: "John Doe",
-    message: "This is a great guestbook! Happy to be here.",
-    date: "2024-12-20T12:34:56Z",
-    likes: 3,
-  },
-  {
-    id: "2",
-    user: "Jane Smith",
-    message: "Loving the vibe here! Keep it up. 😊",
-    date: "2024-12-21T08:45:12Z",
-    likes: 5,
-  },
-  {
-    id: "3",
-    user: "Mike Johnson",
-    message: "Cool platform! Can't wait to see what's next.",
-    date: "2024-12-22T14:23:45Z",
-    likes: 2,
-  },
-  {
-    id: "4",
-    user: "Alice Brown",
-    message: "Awesome guestbook, great design too!",
-    date: "2024-12-23T10:12:34Z",
-    likes: 4,
-  },
-  {
-    id: "5",
-    user: "Chris Evans",
-    message: "Hello world! Testing this out. Looks great so far.",
-    date: "2024-12-22T19:34:56Z",
-    likes: 6,
-  },
-];
 
 // export const like = async (postId) => {
 //   const post = posts.find((p) => p.id === postId);
@@ -113,13 +75,11 @@ export const post = async (
         },
       });
 
-      const posthog = getPostHogClient();
-      posthog.capture({
+      serverPHCapture({
         distinctId: id,
         event: "guestbook_post_submitted",
         properties: { content_length: content.length },
       });
-      await posthog.shutdown();
 
       revalidatePath("/guestbook");
 
@@ -192,13 +152,11 @@ export const likePost = async (
         },
       });
 
-      const posthog = getPostHogClient();
-      posthog.capture({
+      serverPHCapture({
         distinctId: userId,
         event: "guestbook_post_unliked",
         properties: { post_id: postId },
       });
-      await posthog.shutdown();
 
       revalidatePath("/guestbook");
 
@@ -216,13 +174,11 @@ export const likePost = async (
       },
     });
 
-    const posthog = getPostHogClient();
-    posthog.capture({
+    serverPHCapture({
       distinctId: userId,
       event: "guestbook_post_liked",
       properties: { post_id: postId },
     });
-    await posthog.shutdown();
 
     revalidatePath("/guestbook");
 
@@ -295,13 +251,11 @@ export const deletePost = async (
       },
     });
 
-    const posthog = getPostHogClient();
-    posthog.capture({
+    serverPHCapture({
       distinctId: user.id,
       event: "guestbook_post_deleted",
       properties: { post_id: postId },
     });
-    await posthog.shutdown();
 
     console.log("OK5");
     revalidatePath("/guestbook");

@@ -63,3 +63,39 @@ export const serverPHCapture = async ({
 	});
 	await ph.shutdown();
 };
+
+
+type PHIdentify = {
+	distinctId: string;
+	email?: string;
+	firstName?: string;
+	lastName?: string;
+	properties?: Record<string, unknown>;
+};
+
+export const serverPHIdentify = async ({
+	distinctId,
+	email,
+	firstName,
+	lastName,
+	properties,
+}: PHIdentify) => {
+	const ph = getPostHogClient();
+	if (!ph) return;
+
+	ph.identify({
+		distinctId,
+		properties: {
+			email,
+			name:
+				firstName || lastName
+					? `${firstName ?? ""} ${lastName ?? ""}`.trim()
+					: undefined,
+			client_id: getClientId(),
+			app: APP_LABEL,
+			...properties,
+		},
+	});
+
+	await ph.shutdown();
+};

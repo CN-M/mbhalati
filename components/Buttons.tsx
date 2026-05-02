@@ -1,6 +1,5 @@
 "use client";
 
-import posthog from "posthog-js";
 import paperPlane from "@/public/contact/paper-plane-regular 1.svg";
 import moneyHand from "@/public/hero/Frame-1.svg";
 import arrowDown from "@/public/hero/Frame.svg";
@@ -8,6 +7,7 @@ import Google from "@/public/icons/Google.svg";
 
 import Image from "next/image";
 import Link from "next/link";
+import { clientPHCapture } from "@/lib/posthog-client";
 
 export const LetsGetJiggy = () => {
   return (
@@ -32,7 +32,7 @@ export const CheckOutPodcast = () => {
       target="_blank"
     >
       <button
-        onClick={() => posthog.capture("podcast_subscribe_clicked")}
+        onClick={() => clientPHCapture({ eventName: "podcast_subscribe_clicked" })}
         className="lg:px-[28px] lg:py-[14px] md:px-[26px] md:py-[13px] px-4 py-2 flex items-center space-x-1 justify-center md:text-paragraph text-paragraph-sm leading-heading font-regular bg-emerald-500 hover:scale-105 transition-transform duration-200 ease-in-out text-white rounded-lg"
       >
         Subscribe
@@ -106,7 +106,7 @@ export const LoginWithGoogle = () => {
     <Link href="/login/google">
       <button
         onClick={() =>
-          posthog.capture("login_initiated", { provider: "google" })
+          clientPHCapture( { eventName: "login_initiated",  properties: { provider: "google" } })
         }
         className="flex items-center justify-center w-[15rem] md:space-x-4 space-x-2 lg:px-[28px] lg:py-[14px] md:px-[26px] md:py-[13px] px-4 py-2 md:text-paragraph text-paragraph-sm leading-heading bg-black-100 hover:scale-105 transition-transform duration-200 ease-in-out text-white rounded-lg"
       >

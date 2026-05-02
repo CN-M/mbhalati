@@ -1,8 +1,8 @@
 "use client";
 
-import posthog from "posthog-js";
 import { useState } from "react";
 import { SendMessage } from "./Buttons";
+import { clientPHCapture, clientPHcaptureException } from "@/lib/posthog-client";
 
 export const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -43,16 +43,30 @@ export const ContactForm = () => {
 
       setSuccess("Message sent successfully!");
       setFormData({ name: "", surname: "", email: "", message: "" });
-      posthog.capture("contact_form_submitted", {
-        name: formData.name,
-        email: formData.email,
-      });
+      clientPHCapture({
+
+        eventName: "contact_form_submitted", properties: {
+          name: formData.name,
+          email: formData.email,
+        }
+      }
+    );
     } catch (error: any) {
       setError(error.message || "Something went wrong");
-      posthog.captureException(error);
-      posthog.capture("contact_form_failed", {
-        error: error.message || "Unknown error",
-      });
+
+      clientPHcaptureException({
+        err: error, 
+        errorMessage: "Something went wrong"
+      })
+      
+      clientPHCapture({
+        eventName: "contact_form_failed", properties: {
+          error: error.message || "Unknown error",
+        }
+      }
+    );
+
+      
     } finally {
       setIsSubmitting(false);
     }
