@@ -1,5 +1,6 @@
 "use client";
 
+import posthog from "posthog-js";
 import { useState } from "react";
 import { SendMessage } from "./Buttons";
 
@@ -16,7 +17,7 @@ export const ContactForm = () => {
   const [success, setSuccess] = useState("");
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
@@ -42,8 +43,16 @@ export const ContactForm = () => {
 
       setSuccess("Message sent successfully!");
       setFormData({ name: "", surname: "", email: "", message: "" });
+      posthog.capture("contact_form_submitted", {
+        name: formData.name,
+        email: formData.email,
+      });
     } catch (error: any) {
       setError(error.message || "Something went wrong");
+      posthog.captureException(error);
+      posthog.capture("contact_form_failed", {
+        error: error.message || "Unknown error",
+      });
     } finally {
       setIsSubmitting(false);
     }

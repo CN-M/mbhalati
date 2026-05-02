@@ -30,6 +30,8 @@
     "next": "15.0.3",
     "next-contentlayer": "^0.3.4",
     "nodemailer": "^6.10.1",
+    "posthog-js": "^1.372.6",
+    "posthog-node": "^5.33.0",
     "react": "19.0.0-rc.1",
     "react-dom": "19.0.0-rc.1",
     "rehype": "^13.0.2",

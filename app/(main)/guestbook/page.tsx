@@ -8,6 +8,7 @@ import { Posts } from "@/components/Posts";
 
 import { TextBox } from "@/components/PostingForm";
 import { prisma } from "@/lib/server/db";
+import { PostHogIdentify } from "@/components/PostHogIdentify";
 
 import { Pin } from "lucide-react";
 
@@ -56,6 +57,14 @@ export default async function Guestbook() {
       {/* Header */}
 
       {/* Content for logged-in or guest users */}
+      {session && (
+        <PostHogIdentify
+          userId={user.id}
+          email={user.email}
+          firstName={user.firstName}
+          lastName={user.lastName}
+        />
+      )}
       {session ? (
         <div className="flex gap-3 items-start">
           {/* User Avatar */}

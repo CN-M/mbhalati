@@ -9,6 +9,7 @@ import { revalidatePath } from "next/cache";
 import { z } from "zod";
 
 import { prisma } from "@/lib/server/db";
+import { getPostHogClient } from "@/lib/posthog-serve";
 
 const posts = [
   {
@@ -70,7 +71,7 @@ export const post = async (
     message: string;
     response: string;
   },
-  formData: FormData
+  formData: FormData,
 ): Promise<{ message: string; response: string }> => {
   const { user, session } = await getCurrentSession();
 
@@ -112,6 +113,14 @@ export const post = async (
         },
       });
 
+      const posthog = getPostHogClient();
+      posthog.capture({
+        distinctId: id,
+        event: "guestbook_post_submitted",
+        properties: { content_length: content.length },
+      });
+      await posthog.shutdown();
+
       revalidatePath("/guestbook");
 
       return {
@@ -135,7 +144,7 @@ const likeSchema = z.object({
 
 export const likePost = async (
   prevState: { message: string; response: string },
-  formData: FormData
+  formData: FormData,
 ): Promise<{ message: string; response: string }> => {
   const { user, session } = await getCurrentSession();
 
@@ -183,6 +192,14 @@ export const likePost = async (
         },
       });
 
+      const posthog = getPostHogClient();
+      posthog.capture({
+        distinctId: userId,
+        event: "guestbook_post_unliked",
+        properties: { post_id: postId },
+      });
+      await posthog.shutdown();
+
       revalidatePath("/guestbook");
 
       return {
@@ -198,6 +215,14 @@ export const likePost = async (
         postId,
       },
     });
+
+    const posthog = getPostHogClient();
+    posthog.capture({
+      distinctId: userId,
+      event: "guestbook_post_liked",
+      properties: { post_id: postId },
+    });
+    await posthog.shutdown();
 
     revalidatePath("/guestbook");
 
@@ -221,7 +246,7 @@ const deleteSchema = z.object({
 
 export const deletePost = async (
   prevState: { message: string; response: string },
-  formData: FormData
+  formData: FormData,
 ): Promise<{ message: string; response: string }> => {
   const { user, session } = await getCurrentSession();
 
@@ -269,6 +294,14 @@ export const deletePost = async (
         id: postId,
       },
     });
+
+    const posthog = getPostHogClient();
+    posthog.capture({
+      distinctId: user.id,
+      event: "guestbook_post_deleted",
+      properties: { post_id: postId },
+    });
+    await posthog.shutdown();
 
     console.log("OK5");
     revalidatePath("/guestbook");

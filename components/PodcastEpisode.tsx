@@ -1,11 +1,11 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { format, parseISO } from "date-fns";
-import { Clock, Play } from "lucide-react";
+import { Clock } from "lucide-react";
 import Image from "next/image";
-import Link from "next/link";
 
 import { fetchPodcastData, getAccessToken } from "@/lib/server/spotify";
+import { PodcastPlayButton } from "@/components/PodcastPlayButton";
 
 const showId = "2tsu1q7KYNAbPIhCFSgxYL";
 
@@ -99,16 +99,7 @@ export const PodcastEpisodes = async () => {
                   </p>
                 </div>
                 <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4 mt-4">
-                  <Link
-                    href={episode.url}
-                    target="_blank"
-                    className="w-full sm:w-auto"
-                  >
-                    <Button className="w-full sm:w-auto bg-emerald-500 text-white hover:bg-emerald-500/75">
-                      <Play className="w-4 h-4 mr-2" />
-                      Play Episode
-                    </Button>
-                  </Link>
+                  <PodcastPlayButton url={episode.url} title={episode.title} />
                   <Button
                     variant="outline"
                     // className="w-full sm:w-auto border-emerald-500 border-2 text-black-100 bg-white hover:border-tertiary transition-transform duration-1000 ease-in-out"

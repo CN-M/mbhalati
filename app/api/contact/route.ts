@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import nodemailer from "nodemailer";
+import { getPostHogClient } from "@/lib/posthog-serve";
 
 export async function POST(request: Request) {
   const { name, surname, email, message } = await request.json();
@@ -7,7 +8,7 @@ export async function POST(request: Request) {
   if (!name || !surname || !email || !message) {
     return NextResponse.json(
       { message: "All fields are required" },
-      { status: 400 }
+      { status: 400 },
     );
   }
 
@@ -31,12 +32,27 @@ export async function POST(request: Request) {
 
     await transporter.sendMail(mailOptions);
 
+    const posthog = getPostHogClient();
+    posthog.capture({
+      distinctId: email,
+      event: "contact_message_sent",
+      properties: { name, surname },
+    });
+    await posthog.shutdown();
+
     return NextResponse.json({ message: "Message sent successfully!" });
   } catch (error) {
     console.error("Error sending email:", error);
+    const posthog = getPostHogClient();
+    posthog.capture({
+      distinctId: email,
+      event: "contact_message_send_failed",
+      properties: { name, surname },
+    });
+    await posthog.shutdown();
     return NextResponse.json(
       { message: "Failed to send message" },
-      { status: 500 }
+      { status: 500 },
     );
   }
 }

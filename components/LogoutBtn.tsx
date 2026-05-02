@@ -2,10 +2,13 @@
 
 import { logout } from "@/app/(main)/guestbook/actions";
 import { Button } from "@/components/ui/button";
+import posthog from "posthog-js";
 
 export const Logout = () => {
   const handleClick = async (e: any) => {
     e.preventDefault();
+    posthog.capture("user_logged_out");
+    posthog.reset();
     logout();
   };
 

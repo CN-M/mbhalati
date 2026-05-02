@@ -9,6 +9,7 @@ import { cookies } from "next/headers";
 
 import { prisma } from "@/lib/server/db";
 import type { OAuth2Tokens } from "arctic";
+import { getPostHogClient } from "@/lib/posthog-serve";
 
 export async function GET(request: Request): Promise<Response> {
   const url = new URL(request.url);
@@ -89,6 +90,21 @@ export async function GET(request: Request): Promise<Response> {
     const session = await createSession(sessionToken, existingUser.id);
     await setSessionTokenCookie(sessionToken, session.expiresAt);
 
+    const posthog = getPostHogClient();
+    posthog.identify({
+      distinctId: existingUser.id,
+      properties: {
+        email: existingUser.email,
+        name: `${existingUser.firstName} ${existingUser.lastName}`,
+      },
+    });
+    posthog.capture({
+      distinctId: existingUser.id,
+      event: "user_logged_in",
+      properties: { provider: "google" },
+    });
+    await posthog.shutdown();
+
     return new Response(null, {
       status: 302,
       headers: {
@@ -110,6 +126,22 @@ export async function GET(request: Request): Promise<Response> {
   const sessionToken = generateSessionToken();
   const session = await createSession(sessionToken, user.id);
   await setSessionTokenCookie(sessionToken, session.expiresAt);
+
+  const posthog = getPostHogClient();
+  posthog.identify({
+    distinctId: user.id,
+    properties: {
+      email,
+      name: `${firstName} ${lastName}`,
+    },
+  });
+  posthog.capture({
+    distinctId: user.id,
+    event: "user_signed_up",
+    properties: { provider: "google" },
+  });
+  await posthog.shutdown();
+
   return new Response(null, {
     status: 302,
     headers: {
